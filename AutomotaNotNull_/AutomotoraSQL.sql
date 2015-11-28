@@ -115,3 +115,5 @@ INSERT INTO COMPRA VALUES (1,'Subaru',80000,'2015-01-01');
 INSERT INTO vehiculos VALUES ('HZ-GG-20', 123456789, 123456789, 'SBZ', 'Sedan','Rojo',0,1,'foto');
 
 SELECT * FROM vehiculos;
+SELECT * FROM usuarios;
+SELECT * FROM clientes;

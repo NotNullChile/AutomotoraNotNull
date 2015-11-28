@@ -17,11 +17,11 @@ namespace Negocio
         }
 
         [System.ComponentModel.DataObjectMethod(System.ComponentModel.DataObjectMethodType.Insert,true)]
-        public int insertCompra(int idCompra, string proveedor, string valorVehiculo, string fechaCompra)
+        public int insertCompra(int idCompra, string proveedor, int? valorVehiculo, string fechaCompra)
         {
             try
             {
-                return compra.Insert(idCompra, proveedor, int.Parse(valorVehiculo.ToString()), fechaCompra);
+                return compra.Insert(idCompra, proveedor, valorVehiculo, fechaCompra);
             }
             catch(SqlException e)
             {
