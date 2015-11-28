@@ -53,5 +53,10 @@ namespace AutomotaNotNull_
         {
             consultaMantenedor();
         }
+
+        protected void btn_sesion_nuevo_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Registro_Cliente.aspx");
+        }
     }
 }

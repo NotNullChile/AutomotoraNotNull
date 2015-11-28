@@ -65,7 +65,7 @@
                     </div>
                     <hr />
                     <div class="row" style="padding-left:30px; padding-right:30px; padding-top:5px; padding-bottom:20px">
-                        <asp:Button ID="btn_sesion_nuevo" class="btn btn-block btn-info" runat="server" Text="Registrate" />
+                        <asp:Button ID="btn_sesion_nuevo" class="btn btn-block btn-info" runat="server" Text="Registrate" OnClick="btn_sesion_nuevo_Click" />
                     </div>
                 
             </asp:ContentPlaceHolder>
