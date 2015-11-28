@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="Registro_Cliente.aspx.cs" Inherits="AutomotaNotNull_.Registro_Cliente" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-        <link href="css/Style.css" rel="stylesheet" />
+    <link href="css/Style.css" rel="stylesheet" />
     <link href="css/bootstrap.css" rel="stylesheet" />
     <link href="css/font-awesome.css" rel="stylesheet" />
 </asp:Content>
@@ -17,7 +17,7 @@
                     DataKeyNames="rutCliente" DataSourceID="DSCliente" DefaultMode="Insert" 
                     Height="50px" Width="100%" OnPageIndexChanging="DetailsView1_PageIndexChanging"
                     CssClass="table">
-                <Fields>
+                    <Fields>
                     <%--RUT--%>
                     <asp:TemplateField HeaderText="RUT" SortExpression="rutCliente">
                         <%--Header--%>
@@ -90,7 +90,7 @@
                     <asp:BoundField DataField="direccion" HeaderText="Dirección" SortExpression="direccion" />
                     <asp:CommandField ShowInsertButton="True" />
                 </Fields>
-            </asp:DetailsView>
+                </asp:DetailsView>
                 <asp:ObjectDataSource ID="DSCliente" runat="server" InsertMethod="insertCliente" OldValuesParameterFormatString="original_{0}" SelectMethod="showAll" TypeName="Negocio.Cliente">
                 <InsertParameters>
                     <asp:Parameter Name="rutCliente" Type="Int32" />
