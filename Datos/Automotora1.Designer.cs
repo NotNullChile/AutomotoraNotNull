@@ -5222,15 +5222,15 @@ SELECT rutCliente, nombreCliente, fechaNacimiento, direccion FROM clientes WHERE
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_fechaCompra", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fechaCompra", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO compra
-                         (idCompra, proveedor, valorVehiculo, fechaCompra)
-VALUES        (@idCompra,@proveedor,@valorVehiculo,@fechaCompra); 
-SELECT idCompra, proveedor, valorVehiculo, fechaCompra FROM compra WHERE (idCompra = @idCompra)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[compra] ([idCompra], [proveedor], [valorVehiculo], [fechaCompr" +
+                "a]) VALUES (@idCompra, @proveedor, @valorVehiculo, @fechaCompra);\r\nSELECT idComp" +
+                "ra, proveedor, valorVehiculo, fechaCompra FROM compra WHERE (idCompra = @idCompr" +
+                "a)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idCompra", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "idCompra", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@proveedor", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "proveedor", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@valorVehiculo", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "valorVehiculo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fechaCompra", global::System.Data.SqlDbType.Date, 3, global::System.Data.ParameterDirection.Input, 0, 0, "fechaCompra", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idCompra", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idCompra", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@proveedor", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "proveedor", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@valorVehiculo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "valorVehiculo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fechaCompra", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fechaCompra", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
             this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[compra] SET [idCompra] = @idCompra, [proveedor] = @proveedor, [valorVehiculo] = @valorVehiculo, [fechaCompra] = @fechaCompra WHERE (([idCompra] = @Original_idCompra) AND ((@IsNull_proveedor = 1 AND [proveedor] IS NULL) OR ([proveedor] = @Original_proveedor)) AND ((@IsNull_valorVehiculo = 1 AND [valorVehiculo] IS NULL) OR ([valorVehiculo] = @Original_valorVehiculo)) AND ((@IsNull_fechaCompra = 1 AND [fechaCompra] IS NULL) OR ([fechaCompra] = @Original_fechaCompra)));
@@ -5369,7 +5369,7 @@ SELECT idCompra, proveedor, valorVehiculo, fechaCompra FROM compra WHERE (idComp
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int idCompra, string proveedor, global::System.Nullable<int> valorVehiculo, string fechaCompra) {
+        public virtual int Insert(int idCompra, string proveedor, global::System.Nullable<int> valorVehiculo, global::System.Nullable<global::System.DateTime> fechaCompra) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(idCompra));
             if ((proveedor == null)) {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
@@ -5383,11 +5383,11 @@ SELECT idCompra, proveedor, valorVehiculo, fechaCompra FROM compra WHERE (idComp
             else {
                 this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            if ((fechaCompra == null)) {
-                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
+            if ((fechaCompra.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((System.DateTime)(fechaCompra.Value));
             }
             else {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(fechaCompra));
+                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -7852,7 +7852,7 @@ SELECT idVenta, idCliente, patenteVehiculo, valorVenta, fechaVenta FROM venta WH
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT        COUNT(idVenta) + 1 AS count\r\nFROM            venta";
+            this._commandCollection[1].CommandText = "SELECT COUNT(idVenta)+1 FROM venta";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
         }
         

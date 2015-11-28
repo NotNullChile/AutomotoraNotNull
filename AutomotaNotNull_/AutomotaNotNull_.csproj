@@ -63,6 +63,7 @@
     <Content Include="Default.aspx" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="images\banner.png" />
+    <Content Include="ingreso_nuevos_item_mantencion_rick.aspx" />
     <Content Include="ingreso_vehiculo_rick.aspx" />
     <Content Include="insert_compra_rick.aspx" />
     <Content Include="registro_cliente_rick.aspx" />
@@ -90,6 +91,13 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ingreso_nuevos_item_mantencion_rick.aspx.cs">
+      <DependentUpon>ingreso_nuevos_item_mantencion_rick.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ingreso_nuevos_item_mantencion_rick.aspx.designer.cs">
+      <DependentUpon>ingreso_nuevos_item_mantencion_rick.aspx</DependentUpon>
     </Compile>
     <Compile Include="ingreso_vehiculo_rick.aspx.cs">
       <DependentUpon>ingreso_vehiculo_rick.aspx</DependentUpon>
