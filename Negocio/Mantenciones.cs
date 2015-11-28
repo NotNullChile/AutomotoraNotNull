@@ -16,9 +16,9 @@ namespace Negocio
         }
 
         [System.ComponentModel.DataObjectMethod(System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public int insertMantenciones(int idMantenciones, string tipoMantencion, int? valor)
+        public int insertMantenciones(int idMantenciones, string tipoMantencion, int? valor, int rutCliente, string patenteVehiculo)
         {
-            return mantenciones.Insert(idMantenciones, tipoMantencion, valor);
+            return mantenciones.Insert(idMantenciones, tipoMantencion, valor,rutCliente,patenteVehiculo);
         }
         [System.ComponentModel.DataObjectMethod(System.ComponentModel.DataObjectMethodType.Select,true)]
         public Datos.Automotora.mantencionesDataTable showAll()
@@ -28,7 +28,7 @@ namespace Negocio
         [System.ComponentModel.DataObjectMethod(System.ComponentModel.DataObjectMethodType.Select, false)]
         public string countMantenciones()
         {
-            return mantenciones.CountidMantenciones().ToString();
+            return mantenciones.countIdMantenciones().ToString();
         }
         
     }

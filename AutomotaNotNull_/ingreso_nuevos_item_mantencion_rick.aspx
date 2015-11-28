@@ -48,6 +48,52 @@
                         <asp:Label ID="Label3" runat="server" Text='<%# Bind("valor") %>'></asp:Label>
                     </ItemTemplate>
                 </asp:TemplateField>
+                <asp:TemplateField ConvertEmptyStringToNull="False" HeaderText="Cliente" SortExpression="rutCliente">
+                    <EditItemTemplate>
+                        <asp:DynamicControl ID="DynamicControl1" runat="server" DataField="rutCliente" Mode="Edit" />
+                    </EditItemTemplate>
+                    <InsertItemTemplate>
+                        <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="DSCliente" DataTextField="nombreCliente" DataValueField="rutCliente" SelectedValue='<%# Bind("rutCliente") %>'>
+                        </asp:DropDownList>
+                        <asp:ObjectDataSource ID="DSCliente" runat="server" InsertMethod="insertCliente" OldValuesParameterFormatString="original_{0}" SelectMethod="showAll" TypeName="Negocio.Cliente">
+                            <InsertParameters>
+                                <asp:Parameter Name="rutCliente" Type="Int32" />
+                                <asp:Parameter Name="nombreCliente" Type="String" />
+                                <asp:Parameter Name="fechaNacimiento" Type="DateTime" />
+                                <asp:Parameter Name="direccion" Type="String" />
+                                <asp:Parameter Name="clave" Type="String" />
+                            </InsertParameters>
+                        </asp:ObjectDataSource>
+                    </InsertItemTemplate>
+                    <ItemTemplate>
+                        <asp:DynamicControl ID="DynamicControl1" runat="server" DataField="rutCliente" Mode="ReadOnly" />
+                    </ItemTemplate>
+                </asp:TemplateField>
+                <asp:TemplateField ConvertEmptyStringToNull="False" HeaderText="Patente" SortExpression="patenteVehiculo">
+                    <EditItemTemplate>
+                        <asp:DynamicControl ID="DynamicControl2" runat="server" DataField="patenteVehiculo" Mode="Edit" />
+                    </EditItemTemplate>
+                    <InsertItemTemplate>
+                        <asp:DropDownList ID="DropDownList2" runat="server" DataSourceID="DSPatente" DataTextField="patenteVehiculo" DataValueField="patenteVehiculo" SelectedValue='<%# Bind("patenteVehiculo") %>'>
+                        </asp:DropDownList>
+                        <asp:ObjectDataSource ID="DSPatente" runat="server" InsertMethod="insertVehiculo" OldValuesParameterFormatString="original_{0}" SelectMethod="showAll" TypeName="Negocio.Vehiculo">
+                            <InsertParameters>
+                                <asp:Parameter Name="patenteVehiculo" Type="String" />
+                                <asp:Parameter Name="numeroMotor" Type="Int32" />
+                                <asp:Parameter Name="numeroChasis" Type="Int32" />
+                                <asp:Parameter Name="modelo" Type="String" />
+                                <asp:Parameter Name="tipoVehiculo" Type="String" />
+                                <asp:Parameter Name="color" Type="String" />
+                                <asp:Parameter Name="estado" Type="Boolean" />
+                                <asp:Parameter Name="idCompra" Type="Int32" />
+                                <asp:Parameter Name="urlFoto" Type="String" />
+                            </InsertParameters>
+                        </asp:ObjectDataSource>
+                    </InsertItemTemplate>
+                    <ItemTemplate>
+                        <asp:DynamicControl ID="DynamicControl2" runat="server" DataField="patenteVehiculo" Mode="ReadOnly" />
+                    </ItemTemplate>
+                </asp:TemplateField>
                 <asp:CommandField ShowInsertButton="True" />
             </Fields>
         </asp:DetailsView>
@@ -56,6 +102,8 @@
                 <asp:Parameter Name="idMantenciones" Type="Int32" />
                 <asp:Parameter Name="tipoMantencion" Type="String" />
                 <asp:Parameter Name="valor" Type="Int32" />
+                <asp:Parameter Name="rutCliente" Type="Int32" />
+                <asp:Parameter Name="patenteVehiculo" Type="String" />
             </InsertParameters>
         </asp:ObjectDataSource>
     
