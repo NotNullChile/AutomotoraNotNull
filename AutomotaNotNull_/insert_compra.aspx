@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="insert_vehiculo.aspx.cs" Inherits="AutomotaNotNull_.insert_vehiculo" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="insert_compra.aspx.cs" Inherits="AutomotaNotNull_.insert_vehiculo" %>
 
 <!DOCTYPE html>
 
@@ -12,18 +12,18 @@
     <div>
     
         COMPRA VEHICULO<br />
-        <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" CellPadding="4" DataKeyNames="idCompra" DataSourceID="DSCompra" DefaultMode="Insert" ForeColor="#333333" GridLines="None" Height="50px" OnItemInserted="DetailsView1_ItemInserted" OnItemInserting="DetailsView1_ItemInserting" Width="238px">
+        <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" CellPadding="4" DataKeyNames="idCompra" DataSourceID="DSCompra" DefaultMode="Insert" ForeColor="#333333" GridLines="None" Height="50px" OnItemInserted="DetailsView1_ItemInserted" OnItemInserting="DetailsView1_ItemInserting" Width="306px">
             <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
             <CommandRowStyle BackColor="#E2DED6" Font-Bold="True" />
             <EditRowStyle BackColor="#999999" />
             <FieldHeaderStyle BackColor="#E9ECF1" Font-Bold="True" />
             <Fields>
-                <asp:TemplateField HeaderText="⁯ID Compra" SortExpression="idCompra">
+                <asp:TemplateField HeaderText="Factura" SortExpression="idCompra">
                     <EditItemTemplate>
                         <asp:Label ID="Label1" runat="server" Text='<%# Eval("idCompra") %>'></asp:Label>
                     </EditItemTemplate>
                     <InsertItemTemplate>
-                        <asp:TextBox ID="TextBox1" runat="server" ReadOnly="True" Text='<%# Bind("idCompra") %>'></asp:TextBox>
+                        <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("idCompra") %>' TextMode="Number"></asp:TextBox>
                     </InsertItemTemplate>
                     <ItemTemplate>
                         <asp:Label ID="Label1" runat="server" Text='<%# Bind("idCompra") %>'></asp:Label>
@@ -41,7 +41,7 @@
                         <asp:Label ID="Label2" runat="server" Text='<%# Bind("proveedor") %>'></asp:Label>
                     </ItemTemplate>
                 </asp:TemplateField>
-                <asp:TemplateField HeaderText="Valor Vehiculo" SortExpression="valorVehiculo">
+                <asp:TemplateField HeaderText="Total Factura" SortExpression="valorVehiculo">
                     <EditItemTemplate>
                         <asp:TextBox ID="TextBox2" runat="server" Text='<%# Bind("valorVehiculo") %>'></asp:TextBox>
                     </EditItemTemplate>

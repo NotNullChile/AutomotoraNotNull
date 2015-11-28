@@ -10,7 +10,7 @@ namespace Negocio
     [System.ComponentModel.DataObject]
     public class Compra
     {
-        Datos.AutomotoraTableAdapters.compraTableAdapter compra;
+        public Datos.AutomotoraTableAdapters.compraTableAdapter compra;
         public Compra()
         {
             compra = new Datos.AutomotoraTableAdapters.compraTableAdapter();

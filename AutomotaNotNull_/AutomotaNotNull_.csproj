@@ -65,16 +65,24 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="insert_vehiculo.aspx" />
+    <Content Include="ingreso_vehiculo.aspx" />
+    <Content Include="insert_compra.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="insert_vehiculo.aspx.cs">
-      <DependentUpon>insert_vehiculo.aspx</DependentUpon>
+    <Compile Include="ingreso_vehiculo.aspx.cs">
+      <DependentUpon>ingreso_vehiculo.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="insert_vehiculo.aspx.designer.cs">
-      <DependentUpon>insert_vehiculo.aspx</DependentUpon>
+    <Compile Include="ingreso_vehiculo.aspx.designer.cs">
+      <DependentUpon>ingreso_vehiculo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="insert_compra.aspx.cs">
+      <DependentUpon>insert_compra.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="insert_compra.aspx.designer.cs">
+      <DependentUpon>insert_compra.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
