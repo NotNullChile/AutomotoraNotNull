@@ -25,7 +25,7 @@ namespace AutomotaNotNull_
 
         protected void DetailsView1_ItemInserted(object sender, DetailsViewInsertedEventArgs e)
         {
-            
+            Response.Redirect("ingreso_vehiculo_rick.aspx");
         }
 
         protected void DetailsView1_ItemInserting(object sender, DetailsViewInsertEventArgs e)

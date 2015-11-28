@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ingreso_vehiculo.aspx.cs" Inherits="AutomotaNotNull_.ingreso_vehiculo" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ingreso_vehiculo_rick.aspx.cs" Inherits="AutomotaNotNull_.ingreso_vehiculo" %>
 
 <!DOCTYPE html>
 

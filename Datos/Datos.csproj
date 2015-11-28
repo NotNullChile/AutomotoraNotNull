@@ -59,7 +59,6 @@
     <None Include="Automotora.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Automotora.Designer.cs</LastGenOutput>
     </None>
     <None Include="Automotora.xss">
       <DependentUpon>Automotora.xsd</DependentUpon>
