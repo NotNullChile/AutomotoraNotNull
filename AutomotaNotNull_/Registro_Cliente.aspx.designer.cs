@@ -10,16 +10,16 @@
 namespace AutomotaNotNull_ {
     
     
-    public partial class registro_cliente_rick {
+    public partial class Registro_Cliente {
         
         /// <summary>
-        /// form1 control.
+        /// registro_cliente control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.HtmlControls.HtmlForm registro_cliente;
         
         /// <summary>
         /// DetailsView1 control.

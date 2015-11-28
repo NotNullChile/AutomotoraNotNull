@@ -7,13 +7,12 @@ using System.Web.UI.WebControls;
 
 namespace AutomotaNotNull_
 {
-    public partial class registro_cliente_rick : System.Web.UI.Page
+    public partial class Registro_Cliente : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
-
         protected void DetailsView1_PageIndexChanging(object sender, DetailsViewPageEventArgs e)
         {
 

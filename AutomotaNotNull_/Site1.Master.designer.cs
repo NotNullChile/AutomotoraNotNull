@@ -22,13 +22,22 @@ namespace AutomotaNotNull_ {
         protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
         
         /// <summary>
+        /// CajaSesion control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder CajaSesion;
+        
+        /// <summary>
         /// lbl_sesion_titulo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_sesion_titulo;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lbl_sesion_titulo;
         
         /// <summary>
         /// lbl_sesion_username control.
@@ -37,7 +46,7 @@ namespace AutomotaNotNull_ {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_sesion_username;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lbl_sesion_username;
         
         /// <summary>
         /// txt_sesion_username control.
@@ -46,7 +55,7 @@ namespace AutomotaNotNull_ {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_sesion_username;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txt_sesion_username;
         
         /// <summary>
         /// lbl_sesion_password control.
@@ -55,7 +64,7 @@ namespace AutomotaNotNull_ {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_sesion_password;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lbl_sesion_password;
         
         /// <summary>
         /// txt_sesion_password control.
@@ -64,7 +73,7 @@ namespace AutomotaNotNull_ {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txt_sesion_password;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txt_sesion_password;
         
         /// <summary>
         /// btn_sesion_inicio control.
@@ -73,16 +82,7 @@ namespace AutomotaNotNull_ {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_sesion_inicio;
-        
-        /// <summary>
-        /// btn_sesion_nuevo control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_sesion_nuevo;
+        protected global::System.Web.UI.HtmlControls.HtmlButton btn_sesion_inicio;
         
         /// <summary>
         /// ContentPlaceHolder1 control.
