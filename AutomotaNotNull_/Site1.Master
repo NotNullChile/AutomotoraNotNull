@@ -1,0 +1,71 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="AutomotaNotNull_.Site1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="css/Style.css" rel="stylesheet" />
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/font-awesome.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+            <h4>
+            <ul class="nav navbar-nav">
+                <li class="navbar-text active"><a href="Default.aspx">not Null motors <i class="fa fa-car"></i></a></li>
+                <li class="navbar-text"><a href="#">Mantenciones <i class="fa fa-wrench"></i></a></li>
+                <li class="navbar-text"><a href="#">Compra tu Vehículo <i class="fa fa-credit-card-alt"></i></a></li>
+                <li class="navbar-text"><a href="#">Vende tu Vehículo <i class="fa fa-money"></i></a></li>
+                <li class="navbar-text"><a href="#">Regístrate/Inicia Sesión  <i class="fa fa-user"></i></a></li>
+            </ul>
+            </h4>    
+                </div>            
+        </div>
+    </nav>
+    <div class="row">
+        <div class="col-lg-1 col-md-1 col-sm-1">&nbsp;</div>
+        <div class="col-lg-7 col-md-7 col-sm-7">
+            <asp:Image ImageUrl="~/images/banner.png" runat="server" Width="100%" />
+        </div>
+        <div id="info_sesion" class="col-lg-3 col-md-3 col-sm-3 alert-info"> 
+            <form action="Default.aspx" method="post" runat="server">
+                <!--título caja sesión-->
+                <h2>
+                    <asp:Label ID="lbl_sesion_titulo" runat="server">Inicie Sesión <i class="fa fa-user fa-2x"></i></asp:Label>
+                </h2>
+                <hr />
+                <!--username-->
+                <div class="row" style="padding:10px">
+                    <asp:Label ID="lbl_sesion_username" runat="server" CssClass="col-lg-4 col-md-4 col-sm-4">Nombre de Usuario</asp:Label>
+                    <asp:TextBox ID="txt_sesion_username" runat="server" CssClass="col-lg-8 col-md-8 col-sm-8"></asp:TextBox>
+                </div>
+                <!--password-->
+                <div class="row" style="padding:10px">
+                    <asp:Label ID="lbl_sesion_password" runat="server" CssClass="col-lg-4 col-md-4 col-sm-4">Contraseña</asp:Label>
+                    <asp:TextBox ID="txt_sesion_password" runat="server" CssClass="col-lg-8 col-md-8 col-sm-8" TextMode="Password"></asp:TextBox>
+                </div>
+                <!--botones-->
+                <div class="row" style="padding-left:30px; padding-right:30px; padding-top:20px; padding-bottom:5px">
+                    <asp:Button ID="btn_sesion_inicio" runat="server" Text="Inicie Sesión" CssClass="btn btn-block btn-success"/>
+                </div>
+                <hr />
+                <div class="row" style="padding-left:30px; padding-right:30px; padding-top:5px; padding-bottom:20px">
+                    <asp:Button ID="btn_sesion_nuevo" runat="server" Text="Registrarse" CssClass="btn btn-block btn-info"/>
+                </div>
+            </form>
+        </div>
+    <div class="col-lg-1 col-md-1 col-sm-1"></div>
+    </div>
+    
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    
+</body>
+</html>
