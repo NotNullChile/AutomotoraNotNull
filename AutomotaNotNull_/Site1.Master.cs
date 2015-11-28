@@ -15,43 +15,43 @@ namespace AutomotaNotNull_
 
         }
         usuario u = new usuario();
-        private void consultaMantenedor()
-        {
-            try
-            {
-                string username = txt_username.Text;
-                string password = txt_password.Text;
+        //private void consultaMantenedor()
+        //{
+        //    try
+        //    {
+        //        string username = txt_username.Text;
+        //        string password = txt_password.Text;
 
-                DataTable res = u.validarUser(username, password);
+        //        DataTable res = u.validarUser(username, password);
 
-                if (res.DefaultView.Count > 0)
-                {
-                    DataRow row = res.Rows[0];
-                    string nombreUser = row["rutUsuario"].ToString();
-                    int rol = int.Parse(row["rol"].ToString());
-                    if(rol == 0)
-                    {
-                        Session["user"] = nombreUser;
-                        Response.Redirect("default.aspx");
-                    }
-                    else if(rol == 1)
-                    {
-                        Session["admin"] = nombreUser;
-                        Response.Redirect("default.aspx");
-                    }
+        //        if (res.DefaultView.Count > 0)
+        //        {
+        //            DataRow row = res.Rows[0];
+        //            string nombreUser = row["rutUsuario"].ToString();
+        //            int rol = int.Parse(row["rol"].ToString());
+        //            if(rol == 0)
+        //            {
+        //                Session["user"] = nombreUser;
+        //                Response.Redirect("default.aspx");
+        //            }
+        //            else if(rol == 1)
+        //            {
+        //                Session["admin"] = nombreUser;
+        //                Response.Redirect("default.aspx");
+        //            }
                     
 
-                }
-            }
-            catch (Exception)
-            {
+        //        }
+        //    }
+        //    catch (Exception)
+        //    {
 
 
-            }
-        }
+        //    }
+        //}
         protected void btn_sesion_inicio__Click(object sender, EventArgs e)
         {
-            consultaMantenedor();
+            //consultaMantenedor();
         }
 
         protected void btn_sesion_nuevo_Click(object sender, EventArgs e)

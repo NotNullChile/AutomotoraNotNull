@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="AutomotaNotNull_.Site1" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="AutomotaNotNull_.Site1"  %>
 
 <!DOCTYPE html>
 
@@ -12,7 +12,7 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    <form action="Default.aspx" method="post" runat="server">
+    
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -36,48 +36,24 @@
             <asp:Image ImageUrl="~/images/banner.png" runat="server" Width="100%" />
         </div>
         <div id="info_sesion" class="col-lg-3 col-md-3 col-sm-3 alert-info"> 
-            <asp:ContentPlaceHolder ID="CajaSesion" runat="server">
 
                 
-                <!--título caja sesión-->
-                    <h2>
-                        <label id="lbl_sesion_titulo" runat="server">
-                        Inicie Sesión <i class="fa fa-user fa-2x"></i>
-                        </label>
-                    </h2>
-                    <hr />
-                <!--username-->
-                    <div class="row" style="padding:10px">
-                        <label id="lbl_sesion_username" runat="server" class="col-lg-4 col-md-4 col-sm-4">
-                        Nombre de Usuario</label>
-                        <asp:TextBox ID="txt_username" class="col-lg-8 col-md-8 col-sm-8" runat="server"></asp:TextBox>
-                    </div>
-                <!--password-->
-                    <div class="row" style="padding:10px">
-                        <label id="lbl_sesion_password" runat="server" class="col-lg-4 col-md-4 col-sm-4">
-                        Contraseña</label>
-                        <asp:TextBox ID="txt_password" runat="server" class="col-lg-8 col-md-8 col-sm-8" type="password"></asp:TextBox>
-                    </div>
-                <!--botones-->
                 
-                    <div class="row" style="padding-left:30px; padding-right:30px; padding-top:20px; padding-bottom:5px">
-                        <asp:Button ID="btn_sesion_inicio_" class="btn btn-block btn-success" runat="server" Text="Iniciar Sesión" OnClick="btn_sesion_inicio__Click" />
-                    </div>
-                    <hr />
-                    <div class="row" style="padding-left:30px; padding-right:30px; padding-top:5px; padding-bottom:20px">
-                        <asp:Button ID="btn_sesion_nuevo" class="btn btn-block btn-info" runat="server" Text="Registrate" OnClick="btn_sesion_nuevo_Click" />
-                    </div>
-                
-            </asp:ContentPlaceHolder>
+            
         </div>
         <div class="col-lg-1 col-md-1 col-sm-1">
             &nbsp;
         </div>
     </div>
-    
-        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         
+    <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            <br />
+        <br />
         </asp:ContentPlaceHolder>
-    </form>
+
+    </div>
+    
+
 </body>
 </html>
