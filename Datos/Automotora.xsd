@@ -4,7 +4,7 @@
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="automotoraNotNullConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="automotoraNotNullConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Datos.Properties.Settings.GlobalReference.Default.automotoraNotNullConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="automotoraNotNullConnectionString" IsAppSettingsProperty="true" Modifier="Assembly" Name="automotoraNotNullConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.A_N_N.Properties.Settings.GlobalReference.Default.automotoraNotNullConnectionString" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="clientesTableAdapter" GeneratorDataComponentClassName="clientesTableAdapter" Name="clientes" UserDataComponentName="clientesTableAdapter">
