@@ -28,8 +28,7 @@ namespace Negocio
         [System.ComponentModel.DataObjectMethod(System.ComponentModel.DataObjectMethodType.Select, false)]
         public string countMantenciones()
         {
-            return "0"; 
-            //mantenciones.countMantenciones().ToString();
+            return mantenciones.CountidMantenciones().ToString();
         }
         
     }

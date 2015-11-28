@@ -184,7 +184,16 @@ SELECT idMantenciones, tipoMantencion, valor FROM mantenciones WHERE (idMantenci
               <Mapping SourceColumn="tipoMantencion" DataSetColumn="tipoMantencion" />
               <Mapping SourceColumn="valor" DataSetColumn="valor" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="automotoraNotNullConnectionString (Settings)" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="CountidMantenciones" Modifier="Public" Name="CountidMantenciones" QueryType="Scalar" ScalarCallRetval="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="CountidMantenciones">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT COUNT(idMantenciones)+1 FROM mantenciones</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="repuestosTableAdapter" GeneratorDataComponentClassName="repuestosTableAdapter" Name="repuestos" UserDataComponentName="repuestosTableAdapter">
             <MainSource>
