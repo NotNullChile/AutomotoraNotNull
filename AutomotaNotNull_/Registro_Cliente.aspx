@@ -6,10 +6,17 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <form id="registro_cliente" runat="server">
-
-        
-            REGISTRO CLIENTE<br />
-            <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" DataKeyNames="rutCliente" DataSourceID="DSCliente" DefaultMode="Insert" Height="50px" Width="343px" OnPageIndexChanging="DetailsView1_PageIndexChanging">
+        <br />
+        <div class="row">
+            <div class="col-lg-1 col-md-1 col-sm-1"></div>
+            <div class="col-lg-10 col-md-10 col-sm-10 panel panel-primary" style="padding:30px">
+                <h2 class="panel-heading panel-primary">REGISTRO CLIENTE <i class="fa fa-user"></i></h2>
+                <br />
+                <h4 class="panel panel-body">
+                <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" 
+                    DataKeyNames="rutCliente" DataSourceID="DSCliente" DefaultMode="Insert" 
+                    Height="50px" Width="100%" OnPageIndexChanging="DetailsView1_PageIndexChanging"
+                    CssClass="table">
                 <Fields>
                     <%--RUT--%>
                     <asp:TemplateField HeaderText="RUT" SortExpression="rutCliente">
@@ -22,12 +29,14 @@
                         <InsertItemTemplate>
                             <asp:TextBox ID="txt_registro_rut" runat="server" Text='<%# Bind("rutCliente") %>' TextMode="Number">
                             </asp:TextBox>
-                            <%--Validator--%>>
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator_rut" runat="server" ControlToValidate="txt_registro_rut" ErrorMessage="Ingrese RUT" ForeColor="Red">
+                            <%--Validator--%>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator_rut" runat="server" 
+                                ControlToValidate="txt_registro_rut" ErrorMessage="Ingrese RUT" ForeColor="Red">
                             </asp:RequiredFieldValidator>
                         </InsertItemTemplate>
                         <ItemTemplate>
-                        <asp:Label ID="Label1" runat="server" Text='<%# Bind("rutCliente") %>'></asp:Label>
+                        <asp:Label ID="Label1" runat="server" Text='<%# Bind("rutCliente") %>'>
+                        </asp:Label>
                         </ItemTemplate>
                     </asp:TemplateField>
                     <%--Clave--%>
@@ -82,7 +91,7 @@
                     <asp:CommandField ShowInsertButton="True" />
                 </Fields>
             </asp:DetailsView>
-            <asp:ObjectDataSource ID="DSCliente" runat="server" InsertMethod="insertCliente" OldValuesParameterFormatString="original_{0}" SelectMethod="showAll" TypeName="Negocio.Cliente">
+                <asp:ObjectDataSource ID="DSCliente" runat="server" InsertMethod="insertCliente" OldValuesParameterFormatString="original_{0}" SelectMethod="showAll" TypeName="Negocio.Cliente">
                 <InsertParameters>
                     <asp:Parameter Name="rutCliente" Type="Int32" />
                     <asp:Parameter Name="nombreCliente" Type="String" />
@@ -90,7 +99,9 @@
                     <asp:Parameter Name="direccion" Type="String" />
                 </InsertParameters>
             </asp:ObjectDataSource>
-        
-    </div> 
+                </h4>
+            </div>    
+            <div class="col-lg-1 col-md-1 col-sm-1"></div>
+        </div>
     </form>
 </asp:Content>
