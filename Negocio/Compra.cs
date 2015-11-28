@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Datos;
+using System.Data.SqlClient;
 namespace Negocio
 {
     [System.ComponentModel.DataObject]
@@ -18,7 +19,20 @@ namespace Negocio
         [System.ComponentModel.DataObjectMethod(System.ComponentModel.DataObjectMethodType.Insert,true)]
         public int insertCompra(int idCompra, string proveedor, string valorVehiculo, string fechaCompra)
         {
-            return compra.Insert(idCompra, proveedor, int.Parse(valorVehiculo.ToString()), fechaCompra);
+            try
+            {
+                return compra.Insert(idCompra, proveedor, int.Parse(valorVehiculo.ToString()), fechaCompra);
+            }
+            catch(SqlException e)
+            {
+                return e.Number;               
+            }
+            catch(Exception ex)
+            {
+                return ex.HResult;
+            }
+
+           
         }
         [System.ComponentModel.DataObjectMethod(System.ComponentModel.DataObjectMethodType.Select, true)]
         public Datos.Automotora.compraDataTable showAll()
