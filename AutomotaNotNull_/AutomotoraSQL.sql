@@ -125,3 +125,6 @@ SELECT * FROM vehiculos;
 SELECT * FROM usuarios;
 SELECT * FROM clientes;
 SELECT * FROM vehiculo_cliente;
+
+/** lOGIN **/
+SELECT * FROM usuarios WHERE rutUsuario = '19133111' AND clave = 'rick' AND rol = 0;
