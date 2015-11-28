@@ -58,7 +58,7 @@ patenteVehiculo VARCHAR(10),
 CONSTRAINT fk_cliente_vehiculo FOREIGN KEY(idCliente) REFERENCES clientes(rutCliente),
 CONSTRAINT fk_vehiculo_cliente FOREIGN KEY(patenteVehiculo) REFERENCES vehiculos(patenteVehiculo)
 );
-
+SELECT * FROM vehiculo_cliente;
 CREATE TABLE mantenciones
 (
 idMantenciones INT,
@@ -124,3 +124,4 @@ INSERT INTO vehiculos VALUES ('HZ-GG-20', 123456789, 123456789, 'SBZ', 'Sedan','
 SELECT * FROM vehiculos;
 SELECT * FROM usuarios;
 SELECT * FROM clientes;
+SELECT * FROM vehiculo_cliente;

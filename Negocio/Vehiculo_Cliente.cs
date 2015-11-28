@@ -16,9 +16,9 @@ namespace Negocio
         }
 
         [System.ComponentModel.DataObjectMethod(System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public int insertMantenciones(int rutCliente, string patenteVehiculo)
+        public int insertMantenciones(int rutCliente, string patenteVehiculo, int idCliente)
         {
-            return vehiculoCliente.Insert(rutCliente, patenteVehiculo);
+            return vehiculoCliente.Insert(idCliente, patenteVehiculo);
         }
         [System.ComponentModel.DataObjectMethod(System.ComponentModel.DataObjectMethodType.Select,true)]
         public Datos.Automotora.vehiculo_clienteDataTable showAll()

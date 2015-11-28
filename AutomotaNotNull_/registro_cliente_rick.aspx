@@ -20,7 +20,7 @@
                     </EditItemTemplate>
                     <InsertItemTemplate>
                         <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("rutCliente") %>' TextMode="Number"></asp:TextBox>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="TextBox1" ErrorMessage="Ingrese RUT" ForeColor="Red"></asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidatorrUT" runat="server" ControlToValidate="TextBox1" ErrorMessage="Ingrese RUT" ForeColor="Red"></asp:RequiredFieldValidator>
                     </InsertItemTemplate>
                     <ItemTemplate>
                         <asp:Label ID="Label1" runat="server" Text='<%# Bind("rutCliente") %>'></asp:Label>
@@ -32,7 +32,7 @@
                     </EditItemTemplate>
                     <InsertItemTemplate>
                         <asp:TextBox ID="TextBox4" runat="server" Text='<%# Bind("clave") %>'></asp:TextBox>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="TextBox4" ErrorMessage="Ingrese Clave" ForeColor="Red"></asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidatorcLAVE" runat="server" ControlToValidate="TextBox4" ErrorMessage="Ingrese Clave" ForeColor="Red"></asp:RequiredFieldValidator>
                     </InsertItemTemplate>
                     <ItemTemplate>
                         <asp:DynamicControl ID="DynamicControl1" runat="server" DataField="clave" Mode="ReadOnly" />
@@ -44,7 +44,7 @@
                     </EditItemTemplate>
                     <InsertItemTemplate>
                         <asp:TextBox ID="TextBox2" runat="server" Text='<%# Bind("nombreCliente") %>'></asp:TextBox>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="TextBox2" ErrorMessage="Ingrese Nombre" ForeColor="Red"></asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidatornNombre" runat="server" ControlToValidate="TextBox2" ErrorMessage="Ingrese Nombre" ForeColor="Red"></asp:RequiredFieldValidator>
                     </InsertItemTemplate>
                     <ItemTemplate>
                         <asp:Label ID="Label2" runat="server" Text='<%# Bind("nombreCliente") %>'></asp:Label>
@@ -56,7 +56,7 @@
                     </EditItemTemplate>
                     <InsertItemTemplate>
                         <asp:TextBox ID="TextBox3" runat="server" Text='<%# Bind("fechaNacimiento") %>' TextMode="Date"></asp:TextBox>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="TextBox3" ErrorMessage="Ingrese Fecha Nacimiento" ForeColor="Red"></asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidatorFecha" runat="server" ControlToValidate="TextBox3" ErrorMessage="Ingrese Fecha Nacimiento" ForeColor="Red"></asp:RequiredFieldValidator>
                     </InsertItemTemplate>
                     <ItemTemplate>
                         <asp:Label ID="Label3" runat="server" Text='<%# Bind("fechaNacimiento") %>'></asp:Label>
