@@ -12,6 +12,7 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
+    <form action="Default.aspx" method="post" runat="server">
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -37,7 +38,7 @@
         <div id="info_sesion" class="col-lg-3 col-md-3 col-sm-3 alert-info"> 
             <asp:ContentPlaceHolder ID="CajaSesion" runat="server">
 
-                <form action="Default.aspx" method="post" runat="server">
+                
                 <!--título caja sesión-->
                     <h2>
                         <label id="lbl_sesion_titulo" runat="server">
@@ -66,7 +67,7 @@
                     <div class="row" style="padding-left:30px; padding-right:30px; padding-top:5px; padding-bottom:20px">
                         <asp:Button ID="btn_sesion_nuevo" class="btn btn-block btn-info" runat="server" Text="Registrate" />
                     </div>
-                </form>
+                
             </asp:ContentPlaceHolder>
         </div>
         <div class="col-lg-1 col-md-1 col-sm-1">
@@ -77,6 +78,6 @@
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         
         </asp:ContentPlaceHolder>
-    
+    </form>
 </body>
 </html>

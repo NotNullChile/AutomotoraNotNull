@@ -5,7 +5,7 @@
     <link href="css/font-awesome.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <form id="registro_cliente" runat="server">
+    
         <br />
         <div class="row">
             <div class="col-lg-1 col-md-1 col-sm-1"></div>
@@ -103,5 +103,5 @@
             </div>    
             <div class="col-lg-1 col-md-1 col-sm-1"></div>
         </div>
-    </form>
+    
 </asp:Content>
