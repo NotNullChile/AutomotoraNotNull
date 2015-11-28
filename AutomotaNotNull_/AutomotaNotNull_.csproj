@@ -57,12 +57,14 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="asignar_vehiculo_cliente_rick.aspx" />
     <Content Include="css\bootstrap.css" />
     <Content Include="css\font-awesome.css" />
     <Content Include="css\Style.css" />
     <Content Include="Default.aspx" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="images\banner.png" />
+    <Content Include="ingreso_nuevos_item_mantencion_rick.aspx" />
     <Content Include="ingreso_vehiculo_rick.aspx" />
     <Content Include="insert_compra_rick.aspx" />
     <Content Include="Registro_Cliente.aspx" />
@@ -85,12 +87,26 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="asignar_vehiculo_cliente_rick.aspx.cs">
+      <DependentUpon>asignar_vehiculo_cliente_rick.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="asignar_vehiculo_cliente_rick.aspx.designer.cs">
+      <DependentUpon>asignar_vehiculo_cliente_rick.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ingreso_nuevos_item_mantencion_rick.aspx.cs">
+      <DependentUpon>ingreso_nuevos_item_mantencion_rick.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ingreso_nuevos_item_mantencion_rick.aspx.designer.cs">
+      <DependentUpon>ingreso_nuevos_item_mantencion_rick.aspx</DependentUpon>
     </Compile>
     <Compile Include="ingreso_vehiculo_rick.aspx.cs">
       <DependentUpon>ingreso_vehiculo_rick.aspx</DependentUpon>

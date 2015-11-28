@@ -1,4 +1,4 @@
-
+DROP DATABASE automotoraNotNull;
 CREATE DATABASE automotoraNotNull;
 GO
 USE automotoraNotNull;
@@ -18,14 +18,6 @@ nombreRepuesto VARCHAR(60),
 stockRepuesto INT,
 valorRepuesto INT,
 CONSTRAINT pk_repuesto PRIMARY KEY (idRepuesto)
-);
-
-CREATE TABLE mantenciones
-(
-idMantenciones INT,
-tipoMantencion VARCHAR(40),
-valor INT,
-CONSTRAINT pk_mantenciones PRIMARY KEY (idMantenciones)
 );
 
 CREATE TABLE compra
@@ -66,6 +58,18 @@ patenteVehiculo VARCHAR(10),
 CONSTRAINT fk_cliente_vehiculo FOREIGN KEY(idCliente) REFERENCES clientes(rutCliente),
 CONSTRAINT fk_vehiculo_cliente FOREIGN KEY(patenteVehiculo) REFERENCES vehiculos(patenteVehiculo)
 );
+SELECT * FROM vehiculo_cliente;
+CREATE TABLE mantenciones
+(
+idMantenciones INT,
+tipoMantencion VARCHAR(40),
+valor INT,
+rutCliente INT,
+patenteVehiculo VARCHAR(10),
+CONSTRAINT pk_mantenciones PRIMARY KEY (idMantenciones),
+CONSTRAINT fk_mantenciones_cliente FOREIGN KEY(rutCliente) REFERENCES clientes(rutCliente),
+CONSTRAINT fk_mantenciones_vehiculo FOREIGN KEY(patenteVehiculo) REFERENCES vehiculos(patenteVehiculo)
+);
 
 CREATE TABLE repuestos_mantenciones
 (
@@ -86,11 +90,14 @@ CONSTRAINT fk_venta_cliente FOREIGN KEY(idCliente) REFERENCES clientes(rutClient
 CONSTRAINT fk_venta_vehiculo FOREIGN KEY(patenteVehiculo) REFERENCES vehiculos(patenteVehiculo)
 );
 
+
+
 /** ALTER **/
 ALTER TABLE usuarios ADD rol INT; /* 0 = Cliente - 1 = Admin*/
 ALTER TABLE compra ADD fechaCompra DATE;
 ALTER TABLE venta ADD fechaVenta DATE;
 ALTER TABLE vehiculos ADD urlFoto VARCHAR(50);
+
 
 /** INSERT **/
 /** INSERT USUARIOS **/
@@ -117,3 +124,4 @@ INSERT INTO vehiculos VALUES ('HZ-GG-20', 123456789, 123456789, 'SBZ', 'Sedan','
 SELECT * FROM vehiculos;
 SELECT * FROM usuarios;
 SELECT * FROM clientes;
+SELECT * FROM vehiculo_cliente;

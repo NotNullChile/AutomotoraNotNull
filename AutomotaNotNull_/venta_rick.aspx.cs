@@ -15,5 +15,11 @@ namespace AutomotaNotNull_
             TextBox txtIdVenta = (TextBox)DetailsView1.FindControl("txtIdVenta");
             txtIdVenta.Text = v.countVenta();
         }
+
+        protected void txtIdVenta_Load(object sender, EventArgs e)
+        {
+            TextBox txtIdVenta = (TextBox)DetailsView1.FindControl("txtIdVenta");
+            txtIdVenta.Text = v.countVenta();
+        }
     }
 }

@@ -17,7 +17,7 @@ namespace Negocio
         }
 
         [System.ComponentModel.DataObjectMethod(System.ComponentModel.DataObjectMethodType.Insert,true)]
-        public int insertCompra(int idCompra, string proveedor, int? valorVehiculo, string fechaCompra)
+        public int insertCompra(int idCompra, string proveedor, int? valorVehiculo, DateTime? fechaCompra)
         {
             try
             {

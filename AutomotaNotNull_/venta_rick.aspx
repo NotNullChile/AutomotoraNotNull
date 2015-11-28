@@ -19,7 +19,7 @@
                         <asp:Label ID="Label1" runat="server" Text='<%# Eval("idVenta") %>'></asp:Label>
                     </EditItemTemplate>
                     <InsertItemTemplate>
-                        <asp:TextBox ID="txtIdVenta" runat="server" Text='<%# Bind("idVenta") %>' TextMode="Number" ReadOnly="True"></asp:TextBox>
+                        <asp:TextBox ID="txtIdVenta" runat="server" Text='<%# Bind("idVenta") %>' TextMode="Number" ReadOnly="True" OnLoad="txtIdVenta_Load"></asp:TextBox>
                     </InsertItemTemplate>
                     <ItemTemplate>
                         <asp:Label ID="Label1" runat="server" Text='<%# Bind("idVenta") %>'></asp:Label>
