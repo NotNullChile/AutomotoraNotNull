@@ -438,7 +438,9 @@ SELECT patenteVehiculo, numeroMotor, numeroChasis, modelo, tipoVehiculo, color, 
               <DbSource ConnectionRef="automotoraNotNullConnectionString (Settings)" DbObjectName="automotoraNotNull.dbo.vehiculos" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillByListadoVehiculo" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByListadoVehiculo" GeneratorSourceName="FillByListadoVehiculo" GetMethodModifier="Public" GetMethodName="GetDataByListadoVehiculo" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByListadoVehiculo" UserSourceName="FillByListadoVehiculo">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT * FROM vehiculos WHERE urlFoto IS NOT NULL;</CommandText>
+                    <CommandText>SELECT        patenteVehiculo, numeroMotor, numeroChasis, modelo, tipoVehiculo, color, estado, idCompra, urlFoto
+FROM            vehiculos
+WHERE        (urlFoto IS NOT NULL) AND (estado = 1)</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>

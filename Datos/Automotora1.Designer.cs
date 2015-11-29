@@ -7200,7 +7200,9 @@ SELECT patenteVehiculo, numeroMotor, numeroChasis, modelo, tipoVehiculo, color, 
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "SELECT * FROM vehiculos WHERE urlFoto IS NOT NULL;";
+            this._commandCollection[2].CommandText = "SELECT        patenteVehiculo, numeroMotor, numeroChasis, modelo, tipoVehiculo, c" +
+                "olor, estado, idCompra, urlFoto\r\nFROM            vehiculos\r\nWHERE        (urlFot" +
+                "o IS NOT NULL) AND (estado = 1)";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[3].Connection = this.Connection;
