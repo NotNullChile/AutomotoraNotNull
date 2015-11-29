@@ -94,8 +94,13 @@ namespace Negocio
         {
             try
             {
-
-                return vehiculo.UpdateCompraCliente(urlFoto, patenteVehiculo);
+                int res = 0;
+                res = vehiculo.UpdateCompraCliente(urlFoto, patenteVehiculo);
+                if (res == 1)
+                {
+                    vehiculoCliente.deletePatente(patenteVehiculo);
+                }
+                return res;
             }
             catch (Exception e)
             {
