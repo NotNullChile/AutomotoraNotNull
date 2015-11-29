@@ -70,5 +70,12 @@ namespace AutomotaNotNull_
             DropDownList DDLPatente = (DropDownList)DetailsView1.FindControl("DDLPatente");
             txtPatente.Text = DDLPatente.Text;
         }
+
+        protected void DDLRut_PreRender(object sender, EventArgs e)
+        {
+            TextBox txtPatente = (TextBox)DetailsView1.FindControl("txtPatente");
+            DropDownList DDLPatente = (DropDownList)DetailsView1.FindControl("DDLPatente");
+            txtPatente.Text = DDLPatente.Text;
+        }
     }
 }

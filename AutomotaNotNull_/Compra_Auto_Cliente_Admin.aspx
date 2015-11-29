@@ -13,7 +13,7 @@
             <tr>
                 <td class="auto-style1">Busque Rut del Cliente</td>
                 <td>
-                    <asp:DropDownList ID="DDLRut" runat="server" DataSourceID="DSCliente" DataTextField="nombreCliente" DataValueField="rutCliente" AutoPostBack="True">
+                    <asp:DropDownList ID="DDLRut" runat="server" DataSourceID="DSCliente" DataTextField="nombreCliente" DataValueField="rutCliente" AutoPostBack="True" OnPreRender="DDLRut_PreRender">
                     </asp:DropDownList>
                     <asp:ObjectDataSource ID="DSCliente" runat="server" InsertMethod="insertCliente" OldValuesParameterFormatString="original_{0}" SelectMethod="showAll" TypeName="Negocio.Cliente">
                         <InsertParameters>

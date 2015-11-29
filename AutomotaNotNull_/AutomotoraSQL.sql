@@ -125,6 +125,9 @@ INSERT INTO vehiculos VALUES ('AZ-BY-3', 3456789, 3456789, 'Chevrolet', 'Sedan',
 INSERT INTO vehiculos VALUES ('AZ-BY-4', 456789, 456789, 'Ford', 'Todo Terreno','Blanco',1,0,'/imagesAuto/Ford.jpg');
 INSERT INTO vehiculos VALUES ('AZ-BY-5', 56789, 56789, 'Furgon', 'Furgon','Varios',1,0,'/imagesAuto/Furgon.jpg');
 
+SELECT m.idMantenciones AS 'ID Mantención', m.tipoMantencion AS 'Descripción', m.valor AS 'Valor', c.nombreCliente AS 'Cliente', m.patenteVehiculo AS 'Patente'
+FROM mantenciones m
+INNER JOIN clientes c ON m.rutCliente = c.rutCliente;
 
 SELECT * FROM vehiculos;
 SELECT * FROM usuarios;
@@ -167,6 +170,7 @@ DELETE FROM vehiculo_cliente WHERE rutCliente = 1;
 DELETE FROM mantenciones WHERE rutCliente = 1;
 DELETE FROM clientes WHERE rutCliente = 1;
 
+DELETE FROM usuarios WHERE rutUsuario = 19133111;
 DELETE FROM venta WHERE idCliente = 19133111;
 DELETE FROM vehiculo_cliente WHERE idCliente = 19133111;
 DELETE FROM mantenciones WHERE rutCliente = 19133111;

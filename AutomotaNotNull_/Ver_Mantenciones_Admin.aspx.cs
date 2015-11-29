@@ -11,7 +11,10 @@ namespace AutomotaNotNull_
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["rutAdmin"] == null || Session["rol"] == null)
+            {
+                Response.Redirect("default.aspx");
+            }
         }
     }
 }
