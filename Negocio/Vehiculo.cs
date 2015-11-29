@@ -89,5 +89,19 @@ namespace Negocio
             }
 
         }
+        [System.ComponentModel.DataObjectMethod(System.ComponentModel.DataObjectMethodType.Select, false)]
+        public int updateCompraCliente(string urlFoto, string patente, string patenteVehiculo, string original_patenteVehiculo)
+        {
+            try
+            {
+
+                return vehiculo.UpdateCompraCliente(urlFoto, patenteVehiculo);
+            }
+            catch (Exception e)
+            {
+                return 0;
+            }
+
+        }
     }
 }

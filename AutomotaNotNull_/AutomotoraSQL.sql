@@ -148,6 +148,7 @@ SELECT * FROM vehiculos WHERE estado = 0;
 UPDATE vehiculos SET estado = 1, urlFoto = @urlFoto  WHERE patenteVehiculo = @patente;
 
 SELECT * FROM vehiculo_cliente WHERE idCliente=19133111;
+DELETE FROM vehiculo_cliente WHERE patenteVehiculo = 'AZ-BY-1';
 
 /** Mis Mantenciones **/ 
 
