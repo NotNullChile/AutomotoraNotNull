@@ -10,7 +10,7 @@
 namespace AutomotaNotNull_ {
     
     
-    public partial class Index_User {
+    public partial class Index_ADmin {
         
         /// <summary>
         /// form1 control.

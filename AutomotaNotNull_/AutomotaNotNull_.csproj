@@ -63,6 +63,7 @@
     <Content Include="css\font-awesome.css" />
     <Content Include="css\Style.css" />
     <Content Include="Default.aspx" />
+    <Content Include="Eiminar_Cliente.aspx" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="imagesAuto\Audi.jpg" />
     <Content Include="imagesAuto\Chevrolet.jpg" />
@@ -71,7 +72,13 @@
     <Content Include="imagesAuto\Furgon.jpg" />
     <Content Include="imagesAuto\MCLaren.jpg" />
     <Content Include="images\banner.png" />
+    <Content Include="Index_Admin.aspx" />
     <Content Include="Index_User.aspx" />
+    <Content Include="Ingresar_Compra_Admin.aspx" />
+    <Content Include="Ingresar_Mantencion.aspx" />
+    <Content Include="Ingresar_Repuesto.aspx" />
+    <Content Include="Ingresar_Vehiculo_Admin.aspx" />
+    <Content Include="Ingresar_Venta_Admin.aspx" />
     <Content Include="ingreso_nuevos_item_mantencion_rick.aspx" />
     <Content Include="Ingreso_Vehiculo_Cliente.aspx" />
     <Content Include="RICK\ingreso_vehiculo_rick.aspx" />
@@ -90,6 +97,8 @@
     <Content Include="fonts\fontawesome-webfont.woff" />
     <Content Include="fonts\fontawesome-webfont.woff2" />
     <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="User.Master" />
+    <Content Include="Admin.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -98,10 +107,20 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Vender_Vehiculo.aspx" />
     <Content Include="venta_rick.aspx" />
+    <Content Include="Ver_Mantenciones_Admin.aspx" />
+    <Content Include="Ver_Vehiculo_Cliente_Admin.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
     <Compile Include="asignar_vehiculo_cliente_rick.aspx.cs">
       <DependentUpon>asignar_vehiculo_cliente_rick.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -123,12 +142,61 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Eiminar_Cliente.aspx.cs">
+      <DependentUpon>Eiminar_Cliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Eiminar_Cliente.aspx.designer.cs">
+      <DependentUpon>Eiminar_Cliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Index_Admin.aspx.cs">
+      <DependentUpon>Index_Admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Index_Admin.aspx.designer.cs">
+      <DependentUpon>Index_Admin.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Index_User.aspx.cs">
       <DependentUpon>Index_User.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Index_User.aspx.designer.cs">
       <DependentUpon>Index_User.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ingresar_Compra_Admin.aspx.cs">
+      <DependentUpon>Ingresar_Compra_Admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ingresar_Compra_Admin.aspx.designer.cs">
+      <DependentUpon>Ingresar_Compra_Admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ingresar_Mantencion.aspx.cs">
+      <DependentUpon>Ingresar_Mantencion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ingresar_Mantencion.aspx.designer.cs">
+      <DependentUpon>Ingresar_Mantencion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ingresar_Repuesto.aspx.cs">
+      <DependentUpon>Ingresar_Repuesto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ingresar_Repuesto.aspx.designer.cs">
+      <DependentUpon>Ingresar_Repuesto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ingresar_Vehiculo_Admin.aspx.cs">
+      <DependentUpon>Ingresar_Vehiculo_Admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ingresar_Vehiculo_Admin.aspx.designer.cs">
+      <DependentUpon>Ingresar_Vehiculo_Admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ingresar_Venta_Admin.aspx.cs">
+      <DependentUpon>Ingresar_Venta_Admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ingresar_Venta_Admin.aspx.designer.cs">
+      <DependentUpon>Ingresar_Venta_Admin.aspx</DependentUpon>
     </Compile>
     <Compile Include="ingreso_nuevos_item_mantencion_rick.aspx.cs">
       <DependentUpon>ingreso_nuevos_item_mantencion_rick.aspx</DependentUpon>
@@ -222,12 +290,40 @@
     <Compile Include="Site1.Master.designer.cs">
       <DependentUpon>Site1.Master</DependentUpon>
     </Compile>
+    <Compile Include="User.Master.cs">
+      <DependentUpon>User.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User.Master.designer.cs">
+      <DependentUpon>User.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Vender_Vehiculo.aspx.cs">
+      <DependentUpon>Vender_Vehiculo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vender_Vehiculo.aspx.designer.cs">
+      <DependentUpon>Vender_Vehiculo.aspx</DependentUpon>
+    </Compile>
     <Compile Include="venta_rick.aspx.cs">
       <DependentUpon>venta_rick.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="venta_rick.aspx.designer.cs">
       <DependentUpon>venta_rick.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ver_Mantenciones_Admin.aspx.cs">
+      <DependentUpon>Ver_Mantenciones_Admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ver_Mantenciones_Admin.aspx.designer.cs">
+      <DependentUpon>Ver_Mantenciones_Admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Ver_Vehiculo_Cliente_Admin.aspx.cs">
+      <DependentUpon>Ver_Vehiculo_Cliente_Admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ver_Vehiculo_Cliente_Admin.aspx.designer.cs">
+      <DependentUpon>Ver_Vehiculo_Cliente_Admin.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

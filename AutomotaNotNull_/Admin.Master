@@ -1,0 +1,45 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="AutomotaNotNull_.Admin" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <link href="css/Style.css" rel="stylesheet" />
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/font-awesome.css" rel="stylesheet" />
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <!--Barra de Navegación Administrador-->
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <h4>
+                    <ul class="nav navbar-nav">
+                        <li class="navbar-text active"><a href="Index_ADmin.aspx">not Null motors <i class="fa fa-car"></i></a></li>
+                        <li class="navbar-text"><a href="Ingresar_Mantencion.aspx">Ingresar <br />Mantención <i class="fa fa-wrench"></i></a></li>
+                        <li class="navbar-text"><a href="Ingresar_Vehiculo_Admin.aspx">Ingresar <br />Vehículo <i class="fa fa-car"></i></a></li>
+                        <li class="navbar-text"><a href="Ingresar_Venta_Admin.aspx">Ingresar <br />Venta <i class="fa fa-money"></i></a></li>
+                        <li class="navbar-text"><a href="Ingresar_Compra_Admin.aspx">Ingresar <br />Compra <i class="fa fa-shopping-bag"></i></a></li>
+                        <li class="navbar-text"><a href="Ingresar_Repuesto.aspx">Ingresar <br />Repuesto <i class="fa fa-cogs"></i></a></li>
+                        <li class="navbar-text"><a href="Vender_Vehiculo.aspx">Vender <br />Vehículo <i class="fa fa-car"></i></a></li>
+                        <li class="navbar-text"><a href="Eiminar_Cliente.aspx">Eliminar <br />Cliente <i class="fa fa-user-times"></i></a></li>
+                        <li class="navbar-text"><a href="Ver_Vehiculo_Cliente_Admin.aspx">Ver Vehículo <br />Cliente <i class="fa fa-user-plus"></i></a></li>
+                        <li class="navbar-text"><a href="Ver_Mantenciones_Admin.aspx">Ver <br />Mantenciones <i class="fa fa-wrench"></i></a></li>
+                        <li class="navbar-text"><a href="Logout.aspx">Cerrar <br />Sesión <i class="fa fa-close"></i></a></li>
+                    </ul>
+                </h4>    
+            </div>            
+        </div>
+    </nav>
+
+    <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    
+</body>
+</html>
