@@ -55,7 +55,7 @@
                 </div>
                 <div class="btn-group" role="group">
                     <a href="Asociar_Repuestos_Mantencion.aspx" class="btn btn-default" style="height:120px"><h4>Asociar Mantenciones - Repuestos</h4> <br /><i class="fa fa-link fa-3x"></i></a>
-                </div>
+                </div> 
             </div>
         </div>
     </form>
