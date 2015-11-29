@@ -19,11 +19,13 @@
                 <h4>
                     <ul class="nav navbar-nav">
                         <li class="navbar-text active"><a href="Index_ADmin.aspx">not Null motors <i class="fa fa-car"></i></a></li>
+                        <li class="navbar-text"><a href="Buscar_Vehiculo_Admin.aspx">Buscar Vehículo <i class="fa fa-search"></i></a></li>
                         <li class="navbar-text"><a href="Ingresar_Mantencion.aspx">Ingresar <br />Mantención <i class="fa fa-wrench"></i></a></li>
                         <li class="navbar-text"><a href="Ingresar_Vehiculo_Admin.aspx">Ingresar <br />Vehículo <i class="fa fa-car"></i></a></li>
                         <li class="navbar-text"><a href="Ingresar_Venta_Admin.aspx">Ingresar <br />Venta <i class="fa fa-money"></i></a></li>
                         <li class="navbar-text"><a href="Compra_Auto_Cliente_Admin.aspx">Ingresar Compra<br />Cliente <i class="fa fa-shopping-bag"></i></a></li>
-                        <li class="navbar-text"><a href="Compra_Auto_Proveedor_Admin.aspx">Ingresar Compra<br />Proveedor <i class="fa fa-shopping-ship"></i></a></li> <li class="navbar-text"><a href="Ingresar_Repuesto.aspx">Ingresar <br />Repuesto <i class="fa fa-cogs"></i></a></li>
+                        <li class="navbar-text"><a href="Compra_Auto_Proveedor_Admin.aspx">Ingresar Compra<br />Proveedor <i class="fa fa-shopping-ship"></i></a></li> 
+                        <li class="navbar-text"><a href="Ingresar_Repuesto.aspx">Ingresar <br />Repuesto <i class="fa fa-cogs"></i></a></li>
                         <li class="navbar-text"><a href="Vender_Vehiculo.aspx">Vender <br />Vehículo <i class="fa fa-car"></i></a></li>
                         <li class="navbar-text"><a href="Eiminar_Cliente.aspx">Eliminar <br />Cliente <i class="fa fa-user-times"></i></a></li>
                         <li class="navbar-text"><a href="Ver_Vehiculo_Cliente_Admin.aspx">Ver Vehículo <br />Cliente <i class="fa fa-user-plus"></i></a></li>

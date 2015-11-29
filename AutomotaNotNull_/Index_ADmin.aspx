@@ -19,7 +19,7 @@
             </div>    
             <div class="btn-group btn-group-justified" role="group" aria-label="..." style="padding:80px; padding-top:20px; padding-bottom:0px">
                 <div class="btn-group" role="group">
-                    <a href="Buscar_Vehiculos.aspx" class="btn btn-default" style="height:120px"><h4>Buscar Vehículos</h4> <br /><i class="fa fa-search fa-3x"></i></a>
+                    <a href="Buscar_Vehiculo_Admin.aspx" class="btn btn-default" style="height:120px"><h4>Buscar Vehículos</h4> <br /><i class="fa fa-search fa-3x"></i></a>
                 </div>
                 <div class="btn-group" role="group">
                     <a href="Ingresar_Vehiculo_Admin.aspx" class="btn btn-default" style="height:120px"><h4>Ingresar Vehículo<br /> Por compra Proveedor </h4> <i class="fa fa-car fa-3x"></i></a>

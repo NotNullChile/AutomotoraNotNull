@@ -59,6 +59,8 @@
   <ItemGroup>
     <Content Include="asignar_vehiculo_cliente_rick.aspx" />
     <Content Include="Buscar_Vehiculos.aspx" />
+    <Content Include="Buscar_Vehiculo_Admin.aspx" />
+    <Content Include="Buscar_Vehiculo_Cliente.aspx" />
     <Content Include="Compra_Auto_Cliente_Admin.aspx" />
     <Content Include="Compra_Auto_Proveedor_Admin.aspx" />
     <Content Include="css\bootstrap.css" />
@@ -122,6 +124,20 @@
     </Compile>
     <Compile Include="Admin.Master.designer.cs">
       <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Buscar_Vehiculo_Admin.aspx.cs">
+      <DependentUpon>Buscar_Vehiculo_Admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Buscar_Vehiculo_Admin.aspx.designer.cs">
+      <DependentUpon>Buscar_Vehiculo_Admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Buscar_Vehiculo_Cliente.aspx.cs">
+      <DependentUpon>Buscar_Vehiculo_Cliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Buscar_Vehiculo_Cliente.aspx.designer.cs">
+      <DependentUpon>Buscar_Vehiculo_Cliente.aspx</DependentUpon>
     </Compile>
     <Compile Include="RICK\asignar_vehiculo_cliente_rick.aspx.cs">
       <DependentUpon>asignar_vehiculo_cliente_rick.aspx</DependentUpon>
