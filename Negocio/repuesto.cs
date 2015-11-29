@@ -25,5 +25,20 @@ namespace Negocio
         {
             return respuesto.GetData();
         }
+        [System.ComponentModel.DataObjectMethod(System.ComponentModel.DataObjectMethodType.Select, false)]
+        public string countIdRepuesto()
+        {
+            return respuesto.countRepuesto().ToString();
+        }
+        [System.ComponentModel.DataObjectMethod(System.ComponentModel.DataObjectMethodType.Select, false)]
+        public string stockRepuesto(int idRepuesto)
+        {
+            return respuesto.stockRepuesto(idRepuesto).ToString();
+        }
+        [System.ComponentModel.DataObjectMethod(System.ComponentModel.DataObjectMethodType.Update, true)]
+        public int updateStock(int stock, int idRepuesto, int stockRepuesto, int original_idRepuesto)
+        {
+            return respuesto.UpdateStockRepuesto(stockRepuesto, original_idRepuesto);
+        }
     }
 }

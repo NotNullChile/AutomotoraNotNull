@@ -11,11 +11,12 @@ namespace AutomotaNotNull_
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["rutCliente"] == null || Session["rol"] == null)
+            if (Session["rutCliente"] == null || Session["rol"] == null || Session["rutAdmin"] == null)
             {
                 Response.Redirect("default.aspx");
             }
             Session["rutCliente"] = null;
+            Session["rutAdmin"] = null;
             Session["rol"] = null;
             Response.Redirect("default.aspx");
         }

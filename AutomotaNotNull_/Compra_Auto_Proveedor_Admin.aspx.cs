@@ -11,6 +11,29 @@ namespace AutomotaNotNull_
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["rutAdmin"] == null || Session["rol"] == null)
+            {
+                Response.Redirect("default.aspx");
+            }
+        }
+        protected void DSCompra_Load(object sender, EventArgs e)
+        {
+
+
+        }
+
+        protected void DetailsView1_ItemInserted(object sender, DetailsViewInsertedEventArgs e)
+        {
+            Response.Redirect("Ingresar_Vehiculo_Admin.aspx");
+        }
+
+        protected void DetailsView1_ItemInserting(object sender, DetailsViewInsertEventArgs e)
+        {
+
+        }
+
+        protected void DetailsView1_PageIndexChanging(object sender, DetailsViewPageEventArgs e)
+        {
 
         }
     }

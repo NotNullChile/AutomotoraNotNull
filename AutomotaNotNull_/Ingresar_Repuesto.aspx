@@ -4,6 +4,9 @@
         .auto-style1 {
             width: 269px;
         }
+        .auto-style2 {
+            width: 262px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -11,7 +14,7 @@
         <table style="width:100%;">
             <tr>
                 <td class="auto-style1">Ingrese un nuevo Repuesto</td>
-                <td>Modifique el stock de un Repuesto</td>
+                <td class="auto-style2">Modifique el stock de un Repuesto</td>
                 <td>&nbsp;</td>
             </tr>
             <tr>
@@ -23,7 +26,7 @@
                                     <asp:Label ID="Label1" runat="server" Text='<%# Eval("idRepuesto") %>'></asp:Label>
                                 </EditItemTemplate>
                                 <InsertItemTemplate>
-                                    <asp:TextBox ID="txtIdRepuesto" runat="server" ReadOnly="True" Text='<%# Bind("idRepuesto") %>'></asp:TextBox>
+                                    <asp:TextBox ID="txtIdRepuesto" runat="server" ReadOnly="True" Text='<%# Bind("idRepuesto") %>' OnLoad="txtIdRepuesto_Load"></asp:TextBox>
                                 </InsertItemTemplate>
                                 <ItemTemplate>
                                     <asp:Label ID="Label1" runat="server" Text='<%# Bind("idRepuesto") %>'></asp:Label>
@@ -77,11 +80,52 @@
                         </InsertParameters>
                     </asp:ObjectDataSource>
                 </td>
-                <td>&nbsp;</td>
+                <td class="auto-style2">
+                    <asp:DetailsView ID="DetailsView2" runat="server" AutoGenerateRows="False" DataKeyNames="idRepuesto" DataSourceID="DSREpuestoStock" DefaultMode="Edit" Height="50px" Width="125px">
+                        <Fields>
+                            <asp:TemplateField HeaderText="Repuesto" SortExpression="idRepuesto">
+                                <EditItemTemplate>
+                                    <asp:DropDownList ID="DDLRepuesto" runat="server" AutoPostBack="True" DataSourceID="DSREpuestoStock" DataTextField="nombreRepuesto" DataValueField="idRepuesto" OnPreRender="DDLRepuesto_PreRender" SelectedValue='<%# Bind("idRepuesto") %>'>
+                                    </asp:DropDownList>
+                                </EditItemTemplate>
+                                <ItemTemplate>
+                                    <asp:Label ID="Label1" runat="server" Text='<%# Bind("idRepuesto") %>'></asp:Label>
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                            <asp:TemplateField HeaderText="Stock" SortExpression="stockRepuesto">
+                                <EditItemTemplate>
+                                    <asp:TextBox ID="txtStock" runat="server" Text='<%# Bind("stockRepuesto") %>'></asp:TextBox>
+                                </EditItemTemplate>
+                                <ItemTemplate>
+                                    <asp:Label ID="Label2" runat="server" Text='<%# Bind("stockRepuesto") %>'></asp:Label>
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                            <asp:CommandField ShowEditButton="True" />
+                        </Fields>
+                    </asp:DetailsView>
+                    <asp:ObjectDataSource ID="DSREpuestoStock" runat="server" InsertMethod="insertRespuesto" OldValuesParameterFormatString="original_{0}" SelectMethod="showAll" TypeName="Negocio.repuesto" UpdateMethod="updateStock">
+                        <InsertParameters>
+                            <asp:Parameter Name="idRepuesto" Type="Int32" />
+                            <asp:Parameter Name="nombreRepuesto" Type="String" />
+                            <asp:Parameter Name="stockRepuesto" Type="Int32" />
+                            <asp:Parameter Name="valorRepuesto" Type="Int32" />
+                        </InsertParameters>
+                        <UpdateParameters>
+                            <asp:Parameter Name="stock" Type="Int32" />
+                            <asp:Parameter Name="idRepuesto" Type="Int32" />
+                        </UpdateParameters>
+                    </asp:ObjectDataSource>
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                </td>
             </tr>
             <tr>
                 <td class="auto-style1">&nbsp;</td>
-                <td>&nbsp;</td>
+                <td class="auto-style2">&nbsp;</td>
                 <td>&nbsp;</td>
             </tr>
         </table>

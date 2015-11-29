@@ -130,6 +130,7 @@ SELECT * FROM vehiculos;
 SELECT * FROM usuarios;
 SELECT * FROM clientes;
 SELECT * FROM vehiculo_cliente;
+SELECT * FROM repuestos;
 
 /** lOGIN **/
 SELECT * FROM usuarios WHERE rutUsuario = '19133111' AND clave = 'rick' AND rol = 0;
@@ -143,7 +144,10 @@ SELECT * FROM vehiculos WHERE patenteVehiculo = 'gsg';
 /** Listado Vehiculo **/
 UPDATE vehiculos SET estado = 0 WHERE patenteVehiculo = 'HB-HZ-30';
 SELECT * FROM vehiculos WHERE urlFoto IS NOT NULL;
-SELECT * FROM vehiculos WHERE estado = 1;
+SELECT * FROM vehiculos WHERE estado = 0;
+UPDATE vehiculos SET estado = 1, urlFoto = @urlFoto  WHERE patenteVehiculo = @patente;
+
+SELECT * FROM vehiculo_cliente WHERE idCliente=19133111;
 
 /** Mis Mantenciones **/ 
 

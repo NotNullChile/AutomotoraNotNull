@@ -22,7 +22,7 @@
                     <a href="Buscar_Vehiculos.aspx" class="btn btn-default" style="height:120px"><h4>Buscar Vehículos</h4> <br /><i class="fa fa-search fa-3x"></i></a>
                 </div>
                 <div class="btn-group" role="group">
-                    <a href="Ingresar_Vehiculo_Admin.aspx" class="btn btn-default" style="height:120px"><h4>Ingresar Vehículo </h4> <br /><i class="fa fa-car fa-3x"></i></a>
+                    <a href="Ingresar_Vehiculo_Admin.aspx" class="btn btn-default" style="height:120px"><h4>Ingresar Vehículo<br /> Por compra Proveedor </h4> <i class="fa fa-car fa-3x"></i></a>
                 </div>
                 <div class="btn-group" role="group">
                     <a href="Ingresar_Mantencion.aspx" class="btn btn-default" style="height:120px"><h4>Ingresar Mantención </h4> <br /><i class="fa fa-wrench fa-3x"></i></a>
@@ -31,10 +31,10 @@
                     <a href="Ingresar_Venta_Admin.aspx" class="btn btn-default" style="height:120px"><h4>Ingresar Venta </h4> <br /><i class="fa fa-money fa-3x"></i></a>
                 </div>
                 <div class="btn-group" role="group">
-                    <a href="Compra_Auto_Cliente_Admin.aspx" class="btn btn-default" style="height:120px"><h4>Ingresar Compra Cliente</h4> <br /><i class="fa fa-shopping-bag fa-3x"></i></a>
+                    <a href="Compra_Auto_Cliente_Admin.aspx" class="btn btn-default" style="height:120px"><h4>Ingresar Compra <br /> Cliente</h4><i class="fa fa-shopping-bag fa-3x"></i></a>
                 </div>
                 <div class="btn-group" role="group">
-                    <a href="Compra_Auto_Proveedor_Admin.aspx" class="btn btn-default" style="height:120px"><h4>Ingresar Compra Proveedor</h4> <br /><i class="fa fa-ship fa-3x"></i></a>
+                    <a href="Compra_Auto_Proveedor_Admin.aspx" class="btn btn-default" style="height:120px"><h4>Ingresar Compra <br /></h4> <i class="fa fa-ship fa-3x"></i></a>
                 </div>
             </div>
             <div class="btn-group btn-group-justified" role="group" aria-label="..." style="padding:80px; padding-top:0px">
@@ -48,13 +48,13 @@
                     <a href="Eiminar_Cliente.aspx" class="btn btn-default" style="height:120px"><h4>Eliminar Cliente</h4> <br /><i class="fa fa-user-times fa-3x"></i></a>
                 </div>
                 <div class="btn-group" role="group">
-                    <a href="Ver_Vehiculo_Cliente_Admin.aspx" class="btn btn-default" style="height:120px"><h4>Ver vehículos por Cliente</h4> <br /><i class="fa fa-user-plus fa-3x"></i></a>
+                    <a href="Ver_Vehiculo_Cliente_Admin.aspx" class="btn btn-default" style="height:120px"><h4>Ver vehículos por <br /> Cliente</h4><i class="fa fa-user-plus fa-3x"></i></a>
                 </div>
                 <div class="btn-group" role="group"> 
                     <a href="Ver_Mantenciones_Admin.aspx" class="btn btn-default" style="height:120px"><h4>Ver Mantenciones</h4> <br /><i class="fa fa-wrench fa-3x"></i></a>
                 </div>
                 <div class="btn-group" role="group">
-                    <a href="Asociar_Repuestos_Mantencion.aspx" class="btn btn-default" style="height:120px"><h4>Asociar Mantenciones - Repuestos</h4> <br /><i class="fa fa-link fa-3x"></i></a>
+                    <a href="Asociar_Repuestos_Mantencion.aspx" class="btn btn-default" style="height:120px"><h4>Asociar Mantenciones <br /> Repuestos</h4> <i class="fa fa-link fa-3x"></i></a>
                 </div> 
             </div>
         </div>
