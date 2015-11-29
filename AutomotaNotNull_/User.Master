@@ -23,7 +23,7 @@
                 <h4>
                     <ul class="nav navbar-nav">
                         <li class="navbar-text active"><a href="Index_User.aspx">not Null motors <i class="fa fa-car"></i></a></li>
-                        <li class="navbar-text"><a href="Buscar_Vehiculos.aspx">Buscar Vehículo <i class="fa fa-search"></i></a></li>
+                        <li class="navbar-text"><a href="Buscar_Vehiculo_Cliente.aspx">Buscar Vehículo <i class="fa fa-search"></i></a></li>
                         <li class="navbar-text"><a href="Mis_Vehiculos.aspx">Mis Vehículos <i class="fa fa-car"></i></a></li>
                         <li class="navbar-text"><a href="Mis_Mantenciones.aspx">Mis Mantenciones <i class="fa fa-wrench"></i></a></li>
                         <li class="navbar-text"><a href="Ingreso_Vehiculo_Cliente.aspx">Registrar Vehículo <i class="fa fa-registered"></i></a></li>

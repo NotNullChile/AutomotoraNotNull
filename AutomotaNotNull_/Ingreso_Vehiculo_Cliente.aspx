@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="Ingreso_Vehiculo_Cliente.aspx.cs" Inherits="AutomotaNotNull_.Ingreso_Vehiculo" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/User.Master" AutoEventWireup="true" CodeBehind="Ingreso_Vehiculo_Cliente.aspx.cs" Inherits="AutomotaNotNull_.Ingreso_Vehiculo" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="css/Style.css" rel="stylesheet" />
     <link href="css/bootstrap.css" rel="stylesheet" />
