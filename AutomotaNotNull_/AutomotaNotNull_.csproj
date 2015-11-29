@@ -68,6 +68,7 @@
     <Content Include="Ingreso_Vehiculo.aspx" />
     <Content Include="ingreso_vehiculo_rick.aspx" />
     <Content Include="insert_compra_rick.aspx" />
+    <Content Include="Login.aspx" />
     <Content Include="Registro_Cliente.aspx" />
     <Content Include="registro_cliente_rick.aspx" />
     <Content Include="Site1.Master" />
@@ -129,6 +130,13 @@
     </Compile>
     <Compile Include="insert_compra_rick.aspx.designer.cs">
       <DependentUpon>insert_compra_rick.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Registro_Cliente.aspx.cs">
