@@ -35,5 +35,11 @@ namespace Negocio
         {
             return cliente.GetData();
         }
+        [System.ComponentModel.DataObjectMethod(System.ComponentModel.DataObjectMethodType.Select,false)]
+        public string nombreCliente(int rut)
+        {
+            return cliente.nombreCliente(rut);
+        }
     }
-}
+ }
+

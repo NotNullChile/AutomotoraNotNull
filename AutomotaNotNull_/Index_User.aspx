@@ -26,7 +26,6 @@
                 <h4>
                     <asp:Label ID="lblSaludo" runat="server" Text="lblSaludo"></asp:Label>
                 </h4> 
-                <br />
                 <i class="fa fa-user fa-3x"></i></a>
         </div>
         <div class="btn-group" role="group">

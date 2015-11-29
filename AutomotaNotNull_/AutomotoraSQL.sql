@@ -141,3 +141,7 @@ SELECT * FROM vehiculos WHERE urlFoto IS NOT NULL;
 /** Mis Mantenciones **/ 
 
 SELECT * FROM mantenciones WHERE rutCliente = 19133111;
+
+/* Nombre Cliente */
+
+SELECT nombreCliente FROM clientes WHERE rutCliente =1;
