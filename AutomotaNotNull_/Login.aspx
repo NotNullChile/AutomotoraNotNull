@@ -12,42 +12,21 @@
                 <h4 class="panel panel-body">
             
                 <%--DetailsView--%>
-                <asp:Table runat="server"  Width="100%" CssClass="table">
-                    <asp:TableRow>
-                        <asp:TableCell>
-                            <asp:label text="Nombre de Usuario" runat="server" />
-                        </asp:TableCell>
-                        <asp:TableCell>
-                            <asp:textbox runat="server" ID="txt_username_sesion" Width="80%"></asp:textbox>  
-                        </asp:TableCell>
-                    </asp:TableRow>
-                    <asp:TableRow>
-                        <asp:TableCell>
-                            <asp:label text="Contraseña" runat="server" />
-                        </asp:TableCell>
-                        <asp:TableCell>
-                            <asp:textbox runat="server" ID="txt_password_sesion" Width="80%"></asp:textbox>  
-                        </asp:TableCell>
-                    </asp:TableRow>
-                    <asp:TableRow>
-                        <asp:TableCell>
-                        </asp:TableCell>
-                        <asp:TableCell>
-                            <asp:Button runat="server" ID="btn_iniciar_sesion" CssClass="btn btn-success" Width="80%" Text="Iniciar Sesión"></asp:Button>  
-                        </asp:TableCell>
-                    </asp:TableRow>
-                    <asp:TableRow>
-                        <asp:TableCell>&nbsp;</asp:TableCell>
-                    </asp:TableRow>
-                    <asp:TableRow>
-                        <asp:TableCell>
-                        </asp:TableCell>
-                        <asp:TableCell>
-                            <a href="Registro_Cliente.aspx" name="btn_registrar_usuario" class="btn btn-primary" style="width:80%">Registro Usuario Nuevo</a>  
-                        </asp:TableCell>
-                    </asp:TableRow>
-                </asp:Table>
-                
+                    <table style="width: 100%;">
+                        <tr>
+                            <td>Nombre de Usuario</td>
+                            <td><asp:textbox runat="server" ID="txt_username_sesion" Width="80%"></asp:textbox></td>
+                        </tr>
+                        <tr>
+                            <td>Contraseña</td>
+                            <td><asp:textbox runat="server" ID="txt_password_sesion" Width="80%"></asp:textbox>  </td>
+                        </tr>
+                        <tr>
+                            <td><asp:Button runat="server" ID="btn_iniciar_sesion" CssClass="btn btn-success" Width="80%" Text="Iniciar Sesión" OnClick="btn_iniciar_sesion_Click"></asp:Button></td>
+                            <td><a href="Registro_Cliente.aspx" name="btn_registrar_usuario" class="btn btn-primary" style="width:80%">Registro Usuario Nuevo</a>  </td>
+                        </tr>
+                    </table>
+              
        
     
    
