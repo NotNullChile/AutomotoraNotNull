@@ -15,6 +15,8 @@ namespace AutomotaNotNull_
             {
                 Response.Redirect("default.aspx");
             }
+            TextBox txtRut = (TextBox)DetailsView1.FindControl("txtRut");
+            txtRut.Text = Session["rutCliente"].ToString();
         }
     }
 }

@@ -44,8 +44,33 @@
         </table>
     </p>
         <p>
-            <asp:GridView ID="GridView1" runat="server">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="patenteVehiculo" DataSourceID="DSVerPatente">
+                <Columns>
+                    <asp:BoundField DataField="patenteVehiculo" HeaderText="Patente" ReadOnly="True" SortExpression="patenteVehiculo" />
+                    <asp:BoundField DataField="numeroMotor" HeaderText="Número Motor" SortExpression="numeroMotor" />
+                    <asp:BoundField DataField="numeroChasis" HeaderText="Número Chasis" SortExpression="numeroChasis" />
+                    <asp:BoundField DataField="modelo" HeaderText="Modelo" SortExpression="modelo" />
+                    <asp:BoundField DataField="tipoVehiculo" HeaderText="Tipo" SortExpression="tipoVehiculo" />
+                    <asp:BoundField DataField="color" HeaderText="Color" SortExpression="color" />
+                </Columns>
             </asp:GridView>
+            <asp:ObjectDataSource ID="DSVerPatente" runat="server" InsertMethod="insertVehiculo" OldValuesParameterFormatString="original_{0}" SelectMethod="Patente" TypeName="Negocio.Vehiculo">
+                <InsertParameters>
+                    <asp:Parameter Name="patenteVehiculo" Type="String" />
+                    <asp:Parameter Name="numeroMotor" Type="Int32" />
+                    <asp:Parameter Name="numeroChasis" Type="Int32" />
+                    <asp:Parameter Name="modelo" Type="String" />
+                    <asp:Parameter Name="tipoVehiculo" Type="String" />
+                    <asp:Parameter Name="color" Type="String" />
+                    <asp:Parameter Name="estado" Type="Boolean" />
+                    <asp:Parameter Name="idCompra" Type="Int32" />
+                    <asp:Parameter Name="urlFoto" Type="String" />
+                </InsertParameters>
+                <SelectParameters>
+                    <asp:ControlParameter ControlID="DropDownList1" Name="patente" PropertyName="SelectedValue" Type="String" />
+                </SelectParameters>
+            </asp:ObjectDataSource>
     </p>
         <p>
             &nbsp;</p>

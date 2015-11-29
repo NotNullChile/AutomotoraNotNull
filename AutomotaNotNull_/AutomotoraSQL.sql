@@ -137,3 +137,7 @@ SELECT * FROM vehiculos WHERE patenteVehiculo = 'gsg';
 /** Listado Vehiculo **/
 
 SELECT * FROM vehiculos WHERE urlFoto IS NOT NULL;
+
+/** Mis Mantenciones **/ 
+
+SELECT * FROM mantenciones WHERE rutCliente = 19133111;

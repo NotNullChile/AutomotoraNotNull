@@ -22,6 +22,17 @@
                     Height="50px" Width="100%" CssClass="table">
                     <Fields>
                 <%--Patente--%>
+                        <asp:TemplateField ConvertEmptyStringToNull="False" HeaderText="RUT" SortExpression="idCliente">
+                            <EditItemTemplate>
+                                <asp:DynamicControl ID="DynamicControl1" runat="server" DataField="" Mode="Edit" />
+                            </EditItemTemplate>
+                            <InsertItemTemplate>
+                                <asp:TextBox ID="txtRut" runat="server" ReadOnly="True" Text='<%# Bind("idCliente") %>'></asp:TextBox>
+                            </InsertItemTemplate>
+                            <ItemTemplate>
+                                <asp:TextBox ID="TextBox10" runat="server" ReadOnly="True" Text='<%# Bind("idCliente") %>'></asp:TextBox>
+                            </ItemTemplate>
+                        </asp:TemplateField>
                 <asp:TemplateField HeaderText="Patente" SortExpression="patenteVehiculo">
                     <EditItemTemplate>
                         <asp:Label ID="Label1" runat="server" Text='<%# Eval("patenteVehiculo") %>'>
@@ -169,7 +180,7 @@
                 <asp:CommandField ShowInsertButton="True" />
             </Fields>
                 </asp:DetailsView>
-                <%--DataSource--%>&nbsp;<asp:ObjectDataSource ID="DSVehiculo" runat="server" InsertMethod="insertVehiculo" OldValuesParameterFormatString="original_{0}" SelectMethod="showAll" TypeName="Negocio.Vehiculo">
+                    <%--Patente--%>&nbsp;<asp:ObjectDataSource ID="DSVehiculo" runat="server" InsertMethod="insertVehiculo" OldValuesParameterFormatString="original_{0}" SelectMethod="showAll" TypeName="Negocio.Vehiculo">
                     <InsertParameters>
                 <asp:Parameter Name="patenteVehiculo" Type="String" />
                 <asp:Parameter Name="numeroMotor" Type="Int32" />
