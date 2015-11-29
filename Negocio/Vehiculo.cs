@@ -80,6 +80,7 @@ namespace Negocio
         {
             try
             {
+                
                 return vehiculo.GetDataByListaAutoDDLParaVender();
             }
             catch (Exception e)

@@ -12,7 +12,7 @@
     <Shape ID="DesignTable:repuestos_mantenciones" ZOrder="8" X="1572" Y="154" Height="115" Width="287" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="64" />
     <Shape ID="DesignTable:usuarios" ZOrder="3" X="1905" Y="421" Height="153" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="83" />
     <Shape ID="DesignTable:vehiculo_cliente" ZOrder="9" X="1176" Y="154" Height="115" Width="237" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="64" />
-    <Shape ID="DesignTable:vehiculos" ZOrder="1" X="492" Y="154" Height="305" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="197" />
+    <Shape ID="DesignTable:vehiculos" ZOrder="1" X="492" Y="153" Height="324" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="197" />
     <Shape ID="DesignTable:venta" ZOrder="10" X="720" Y="154" Height="191" Width="177" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="121" />
     <Shape ID="DesignTable:mantenciones" ZOrder="7" X="1406" Y="362" Height="210" Width="225" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="121" />
   </Shapes>
@@ -45,11 +45,11 @@
       <RoutePoints>
         <Point>
           <X>792</X>
-          <Y>175</Y>
+          <Y>174</Y>
         </Point>
         <Point>
           <X>1176</X>
-          <Y>175</Y>
+          <Y>174</Y>
         </Point>
       </RoutePoints>
     </Connector>
@@ -57,11 +57,11 @@
       <RoutePoints>
         <Point>
           <X>452</X>
-          <Y>167</Y>
+          <Y>166</Y>
         </Point>
         <Point>
           <X>492</X>
-          <Y>167</Y>
+          <Y>166</Y>
         </Point>
       </RoutePoints>
     </Connector>
@@ -81,11 +81,11 @@
       <RoutePoints>
         <Point>
           <X>792</X>
-          <Y>362</Y>
+          <Y>361</Y>
         </Point>
         <Point>
           <X>809</X>
-          <Y>362</Y>
+          <Y>361</Y>
         </Point>
         <Point>
           <X>809</X>
@@ -129,11 +129,11 @@
       <RoutePoints>
         <Point>
           <X>792</X>
-          <Y>371</Y>
+          <Y>370</Y>
         </Point>
         <Point>
           <X>1406</X>
-          <Y>371</Y>
+          <Y>370</Y>
         </Point>
       </RoutePoints>
     </Connector>
