@@ -40,6 +40,11 @@ namespace Negocio
         {
             return cliente.nombreCliente(rut);
         }
+        [System.ComponentModel.DataObjectMethod(System.ComponentModel.DataObjectMethodType.Delete, false)]
+        public int deleteCliente(int Original_rutCliente)
+        {
+            return cliente.Delete(Original_rutCliente);
+        }
     }
  }
 
