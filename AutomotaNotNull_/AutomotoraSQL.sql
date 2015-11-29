@@ -158,10 +158,16 @@ SELECT * FROM mantenciones WHERE rutCliente = 19133111;
 
 SELECT nombreCliente FROM clientes WHERE rutCliente =1;
 
-SELECT * FROM vehiculo_cliente;
+SELECT * FROM usuarios;
+SELECT * FROM clientes;
 DELETE FROM vehiculos WHERE patenteVehiculo = 'aa';
 DELETE FROM vehiculo_cliente;
 
 DELETE FROM vehiculo_cliente WHERE rutCliente = 1;
 DELETE FROM mantenciones WHERE rutCliente = 1;
 DELETE FROM clientes WHERE rutCliente = 1;
+
+DELETE FROM venta WHERE idCliente = 19133111;
+DELETE FROM vehiculo_cliente WHERE idCliente = 19133111;
+DELETE FROM mantenciones WHERE rutCliente = 19133111;
+DELETE FROM clientes WHERE rutCliente = 19133111;

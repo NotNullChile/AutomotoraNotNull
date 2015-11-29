@@ -11,10 +11,17 @@ namespace Negocio
     {
         Datos.AutomotoraTableAdapters.clientesTableAdapter cliente;
         Datos.AutomotoraTableAdapters.usuariosTableAdapter usuario;
+
+        Datos.AutomotoraTableAdapters.ventaTableAdapter venta;
+        Datos.AutomotoraTableAdapters.vehiculo_clienteTableAdapter vehiculoCliente;
+        Datos.AutomotoraTableAdapters.mantencionesTableAdapter mantenciones;
         public Cliente()
         {
             cliente = new Datos.AutomotoraTableAdapters.clientesTableAdapter();
             usuario = new Datos.AutomotoraTableAdapters.usuariosTableAdapter();
+            venta = new Datos.AutomotoraTableAdapters.ventaTableAdapter();
+            vehiculoCliente = new Datos.AutomotoraTableAdapters.vehiculo_clienteTableAdapter();
+            mantenciones = new Datos.AutomotoraTableAdapters.mantencionesTableAdapter();
         }
 
         [System.ComponentModel.DataObjectMethod(System.ComponentModel.DataObjectMethodType.Insert, true)]
@@ -43,7 +50,19 @@ namespace Negocio
         [System.ComponentModel.DataObjectMethod(System.ComponentModel.DataObjectMethodType.Delete, false)]
         public int deleteCliente(int Original_rutCliente)
         {
-            return cliente.Delete(Original_rutCliente);
+            int res1 = 0;
+            int res2 = 0;
+            int res3 = 0;
+            int res4 = 0;
+
+            res1 = venta.deleteCliente(Original_rutCliente);
+            res2 = vehiculoCliente.deleteCliente(Original_rutCliente);
+            res3 = mantenciones.deleteCliente(Original_rutCliente);
+            if (res1 == 1 || res2 == 1 || res2 == 1 )
+            {
+                res4 = cliente.Delete(Original_rutCliente);
+            }
+            return res4;
         }
     }
  }
