@@ -17,10 +17,16 @@
                         </tr>
                         <tr>
                             <td><asp:label text="Contraseña" runat="server" /></td>
-                            <td><asp:textbox runat="server" ID="txt_password_sesion" Width="80%"></asp:textbox>  </td>
+                            <td><asp:textbox runat="server" ID="txt_password_sesion" Width="80%" TextMode="Password"></asp:textbox>  </td>
                         </tr>
+                        <tr><td>&nbsp;</td></tr>
                         <tr>
+                            <td>&nbsp;</td>
                             <td><asp:Button runat="server" ID="btn_iniciar_sesion" CssClass="btn btn-success" Width="80%" Text="Iniciar Sesión" OnClick="btn_iniciar_sesion_Click1"></asp:Button>  </td>
+                        </tr>
+                        <tr><td>&nbsp;</td></tr>
+                        <tr>
+                            <td>&nbsp;</td>
                             <td><a href="Registro_Cliente.aspx" name="btn_registrar_usuario" class="btn btn-primary" style="width:80%">Registro Usuario Nuevo</a></td>
                         </tr>
                     </table>

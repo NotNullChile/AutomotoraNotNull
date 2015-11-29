@@ -31,7 +31,10 @@
                     <a href="Ingresar_Venta_Admin.aspx" class="btn btn-default" style="height:120px"><h4>Ingresar Venta </h4> <br /><i class="fa fa-money fa-3x"></i></a>
                 </div>
                 <div class="btn-group" role="group">
-                    <a href="Ingresar_Compra_Admin.aspx" class="btn btn-default" style="height:120px"><h4>Ingresar Compra </h4> <br /><i class="fa fa-shopping-bag fa-3x"></i></a>
+                    <a href="Compra_Auto_Cliente_Admin.aspx" class="btn btn-default" style="height:120px"><h4>Ingresar Compra Cliente</h4> <br /><i class="fa fa-shopping-bag fa-3x"></i></a>
+                </div>
+                <div class="btn-group" role="group">
+                    <a href="Compra_Auto_Proveedor_Admin.aspx" class="btn btn-default" style="height:120px"><h4>Ingresar Compra Proveedor</h4> <br /><i class="fa fa-ship fa-3x"></i></a>
                 </div>
             </div>
             <div class="btn-group btn-group-justified" role="group" aria-label="..." style="padding:80px; padding-top:0px">
@@ -50,7 +53,9 @@
                 <div class="btn-group" role="group">
                     <a href="Ver_Mantenciones_Admin.aspx" class="btn btn-default" style="height:120px"><h4>Ver Mantenciones</h4> <br /><i class="fa fa-wrench fa-3x"></i></a>
                 </div>
-
+                <div class="btn-group" role="group">
+                    <a href="Asociar_Repuestos_Mantencion.aspx" class="btn btn-default" style="height:120px"><h4>Asociar Mantenciones - Repuestos</h4> <br /><i class="fa fa-link fa-3x"></i></a>
+                </div>
             </div>
         </div>
     </form>
