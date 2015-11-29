@@ -25,5 +25,10 @@ namespace Negocio
         {
             return vehiculo.GetData();
         }
+        [System.ComponentModel.DataObjectMethod(System.ComponentModel.DataObjectMethodType.Select, false)]
+        public Datos.Automotora.vehiculosDataTable ListadoVehiculoParaVender()
+        {
+            return vehiculo.GetDataByListadoVehiculo();
+        }
     }
 }

@@ -131,7 +131,7 @@ SELECT * FROM usuarios WHERE rutUsuario = '19133111' AND clave = 'rick' AND rol 
 
 /** Ver Mis Vehiculos **/
 
-SELECT * FROM vehiculo_cliente WHERE idCliente = 19133111;
+SELECT patenteVehiculo FROM vehiculo_cliente WHERE idCliente = 19133111;
 SELECT * FROM vehiculos WHERE patenteVehiculo = 'gsg';
 
 /** Listado Vehiculo **/
