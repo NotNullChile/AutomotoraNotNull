@@ -27,7 +27,7 @@
                         </EditItemTemplate>
                         <%--txt_rut--%>
                         <InsertItemTemplate>
-                            <asp:TextBox ID="txt_registro_rut" runat="server" Text='<%# Bind("rutCliente") %>' TextMode="Number"></asp:TextBox>
+                            <asp:TextBox ID="txt_registro_rut" runat="server" Width="80%" Text='<%# Bind("rutCliente") %>' TextMode="Number"></asp:TextBox>
                             <%--Validator--%>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator_rut" runat="server" 
                                 ControlToValidate="txt_registro_rut" ErrorMessage="Ingrese RUT" ForeColor="Red"></asp:RequiredFieldValidator>
@@ -43,7 +43,7 @@
                             <asp:DynamicControl ID="DynamicControl1" runat="server" DataField="clave" Mode="Edit" />
                         </EditItemTemplate>
                         <InsertItemTemplate>
-                            <asp:TextBox ID="txt_registro_clave" runat="server" Text='<%# Bind("clave") %>'></asp:TextBox>
+                            <asp:TextBox ID="txt_registro_clave" runat="server" Width="80%" Text='<%# Bind("clave") %>'></asp:TextBox>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator_clave" runat="server" ControlToValidate="txt_registro_clave" ErrorMessage="Ingrese Clave" ForeColor="Red"></asp:RequiredFieldValidator>
                         </InsertItemTemplate>
                         <ItemTemplate>
@@ -57,7 +57,7 @@
                             </asp:TextBox>
                         </EditItemTemplate>
                         <InsertItemTemplate>
-                            <asp:TextBox ID="TextBox2" runat="server" Text='<%# Bind("nombreCliente") %>'></asp:TextBox>
+                            <asp:TextBox ID="TextBox2" runat="server" Width="80%" Text='<%# Bind("nombreCliente") %>'></asp:TextBox>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator_nombre" runat="server" ControlToValidate="TextBox2" ErrorMessage="Ingrese Nombre" ForeColor="Red"></asp:RequiredFieldValidator>
                         </InsertItemTemplate>
                         <ItemTemplate>
@@ -68,12 +68,12 @@
                     <%--Fecha--%>
                     <asp:TemplateField HeaderText="Fecha Naciemiento" SortExpression="fechaNacimiento">
                         <EditItemTemplate>
-                            <asp:TextBox ID="TextBox2" runat="server" Text='<%# Bind("fechaNacimiento") %>'>
+                            <asp:TextBox ID="TextBox2" runat="server" Width="80%" Text='<%# Bind("fechaNacimiento") %>'>
                             </asp:TextBox>
                         </EditItemTemplate>
                         <InsertItemTemplate>
                             <asp:TextBox ID="TextBox3" runat="server" Text='<%# Bind("fechaNacimiento") %>' TextMode="Date"></asp:TextBox>
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator_fecha" runat="server" ControlToValidate="TextBox3" ErrorMessage="Ingrese Fecha Nacimiento" ForeColor="Red"></asp:RequiredFieldValidator>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator_fecha" Width="80%" runat="server" ControlToValidate="TextBox3" ErrorMessage="Ingrese Fecha Nacimiento" ForeColor="Red"></asp:RequiredFieldValidator>
                         </InsertItemTemplate>
                         <ItemTemplate>
                             <asp:Label ID="Label3" runat="server" Text='<%# Bind("fechaNacimiento") %>'>
@@ -81,7 +81,7 @@
                     </ItemTemplate>
                     </asp:TemplateField>
                     <%--Dirección--%>
-                    <asp:BoundField DataField="direccion" HeaderText="Dirección" SortExpression="direccion" />
+                    <asp:BoundField DataField="direccion" HeaderText="Dirección"  SortExpression="direccion" />
                     <asp:CommandField ShowInsertButton="True" />
                 </Fields>
                 </asp:DetailsView>

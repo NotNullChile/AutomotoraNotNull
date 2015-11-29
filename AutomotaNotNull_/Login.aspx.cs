@@ -27,18 +27,20 @@ namespace AutomotaNotNull_
                 if (res.DefaultView.Count > 0)
                 {
                     DataRow row = res.Rows[0];
-                    string nombreUser = row["rutUsuario"].ToString();
+                    string rut = row["rutUsuario"].ToString();
                     int rol = int.Parse(row["rol"].ToString());
 
-                    string[] arrayUsuario = { nombreUser, rol.ToString() };
+                    
                     if (rol == 0)
                     {
-                        Session["user[]"] = arrayUsuario;
-                        Response.Redirect("default.aspx");
+                        Session["rutCliente"] = rut;
+                        Session["rol"] = rol;
+                        Response.Redirect("Index_User.aspx");
                     }
                     else if (rol == 1)
                     {
-                        Session["admin[]"] = arrayUsuario;
+                        Session["rutAdmin"] = rut;
+                        Session["rol"] = rol;
                         Response.Redirect("default.aspx");
                     }
 
@@ -52,7 +54,8 @@ namespace AutomotaNotNull_
             }
         }
 
-        protected void btn_iniciar_sesion_Click(object sender, EventArgs e)
+
+        protected void btn_iniciar_sesion_Click1(object sender, EventArgs e)
         {
             consultaMantenedor();
         }

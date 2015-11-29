@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="Ingreso_Vehiculo.aspx.cs" Inherits="AutomotaNotNull_.Ingreso_Vehiculo" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="Ingreso_Vehiculo_Cliente.aspx.cs" Inherits="AutomotaNotNull_.Ingreso_Vehiculo" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="css/Style.css" rel="stylesheet" />
     <link href="css/bootstrap.css" rel="stylesheet" />
@@ -146,8 +146,7 @@
                     </EditItemTemplate>
                     <InsertItemTemplate>
                         <asp:RadioButtonList ID="RadioButtonList1" runat="server" SelectedValue='<%# Bind("estado") %>'>
-                            <asp:ListItem Value="true">Disponible</asp:ListItem>
-                            <asp:ListItem Value="false">Ocupado</asp:ListItem>
+                            <asp:ListItem Value="true" Selected="True">Disponible</asp:ListItem>
                         </asp:RadioButtonList>
                     </InsertItemTemplate>
                     <ItemTemplate>
@@ -160,38 +159,17 @@
                         <asp:TextBox ID="TextBox6" runat="server" Text='<%# Bind("idCompra") %>'></asp:TextBox>
                     </EditItemTemplate>
                     <InsertItemTemplate>
-                        <asp:DropDownList ID="DropDownList3" runat="server" DataSourceID="DSFactura" DataTextField="idCompra" DataValueField="idCompra" SelectedValue='<%# Bind("idCompra") %>'>
-                        </asp:DropDownList>
-                        <asp:ObjectDataSource ID="DSFactura" runat="server" InsertMethod="insertCompra" OldValuesParameterFormatString="original_{0}" SelectMethod="showAll" TypeName="Negocio.Compra">
-                            <InsertParameters>
-                                <asp:Parameter Name="idCompra" Type="Int32" />
-                                <asp:Parameter Name="proveedor" Type="String" />
-                                <asp:Parameter Name="valorVehiculo" Type="String" />
-                                <asp:Parameter Name="fechaCompra" Type="String" />
-                            </InsertParameters>
-                        </asp:ObjectDataSource>
+                        <asp:TextBox ID="TextBox9" runat="server" ReadOnly="True">0</asp:TextBox>
                     </InsertItemTemplate>
                     <ItemTemplate>
                         <asp:Label ID="Label7" runat="server" Text='<%# Bind("idCompra") %>'></asp:Label>
                     </ItemTemplate>
                 </asp:TemplateField>    
                 <%--Foto--%>
-                <asp:TemplateField HeaderText="Foto" SortExpression="urlFoto">
-                    <EditItemTemplate>
-                        <asp:TextBox ID="TextBox7" runat="server" Text='<%# Bind("urlFoto") %>'></asp:TextBox>
-                    </EditItemTemplate>
-                    <InsertItemTemplate>
-                        <asp:TextBox ID="TextBox8" runat="server" Text='<%# Bind("urlFoto") %>'></asp:TextBox>
-                    </InsertItemTemplate>
-                    <ItemTemplate>
-                        <asp:Label ID="Label8" runat="server" Text='<%# Bind("urlFoto") %>'></asp:Label>
-                    </ItemTemplate>
-                </asp:TemplateField>
                 <asp:CommandField ShowInsertButton="True" />
             </Fields>
                 </asp:DetailsView>
-                <%--DataSource--%>>
-                <asp:ObjectDataSource ID="DSVehiculo" runat="server" InsertMethod="insertVehiculo" OldValuesParameterFormatString="original_{0}" SelectMethod="showAll" TypeName="Negocio.Vehiculo">
+                <%--DataSource--%>&nbsp;<asp:ObjectDataSource ID="DSVehiculo" runat="server" InsertMethod="insertVehiculo" OldValuesParameterFormatString="original_{0}" SelectMethod="showAll" TypeName="Negocio.Vehiculo">
                     <InsertParameters>
                 <asp:Parameter Name="patenteVehiculo" Type="String" />
                 <asp:Parameter Name="numeroMotor" Type="Int32" />

@@ -3670,6 +3670,8 @@ tbody.collapse.in {
 .btn-group .btn-group + .btn,
 .btn-group .btn-group + .btn-group {
   margin-left: -1px;
+    top: 0px;
+    left: 0px;
 }
 .btn-toolbar {
   margin-left: -5px;
@@ -3799,7 +3801,7 @@ tbody.collapse.in {
 .btn-group-justified > .btn-group {
   display: table-cell;
   float: none;
-  width: 1%;
+  width: 5%;
 }
 .btn-group-justified > .btn-group .btn {
   width: 100%;

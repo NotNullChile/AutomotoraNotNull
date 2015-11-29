@@ -133,3 +133,7 @@ SELECT * FROM usuarios WHERE rutUsuario = '19133111' AND clave = 'rick' AND rol 
 
 SELECT * FROM vehiculo_cliente WHERE idCliente = 19133111;
 SELECT * FROM vehiculos WHERE patenteVehiculo = 'gsg';
+
+/** Listado Vehiculo **/
+
+SELECT * FROM vehiculos WHERE urlFoto IS NOT NULL;
