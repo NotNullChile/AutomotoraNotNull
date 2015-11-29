@@ -18,5 +18,11 @@ namespace AutomotaNotNull_
             TextBox txtRut = (TextBox)DetailsView1.FindControl("txtRut");
             txtRut.Text = Session["rutCliente"].ToString();
         }
+
+        protected void txtRut_Load(object sender, EventArgs e)
+        {
+            TextBox txtRut = (TextBox)DetailsView1.FindControl("txtRut");
+            txtRut.Text = Session["rutCliente"].ToString();
+        }
     }
 }

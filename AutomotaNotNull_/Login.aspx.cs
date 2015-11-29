@@ -41,7 +41,7 @@ namespace AutomotaNotNull_
                     {
                         Session["rutAdmin"] = rut;
                         Session["rol"] = rol;
-                        Response.Redirect("default.aspx");
+                        Response.Redirect("Index_Admin.aspx");
                     }
 
 

@@ -20,6 +20,8 @@ namespace Negocio
         [System.ComponentModel.DataObjectMethod(System.ComponentModel.DataObjectMethodType.Insert,true)]
         public int insertVehiculo(string patenteVehiculo, int numeroMotor, int numeroChasis, string modelo, string tipoVehiculo, string color, bool estado, int idCompra, string urlFoto, int idCliente)
         {
+             try
+            {
             int res = 0;
             res= vehiculo.Insert(patenteVehiculo, numeroMotor, numeroChasis, modelo, tipoVehiculo, color, estado, idCompra, urlFoto);
             if (idCliente > 0)
@@ -30,21 +32,48 @@ namespace Negocio
                 }
             }
             return res;
+            }
+             catch (Exception e)
+             {
+                 return 0;
+             }
         }
         [System.ComponentModel.DataObjectMethod(System.ComponentModel.DataObjectMethodType.Select,true)]
         public Datos.Automotora.vehiculosDataTable showAll()
         {
+             try
+            {
             return vehiculo.GetData();
+                 }
+            catch(Exception e)
+            {
+                return null;
+            }
         }
         [System.ComponentModel.DataObjectMethod(System.ComponentModel.DataObjectMethodType.Select, false)]
         public Datos.Automotora.vehiculosDataTable ListadoVehiculoParaVender()
         {
+             try
+            {
             return vehiculo.GetDataByListadoVehiculo();
+                 }
+            catch(Exception e)
+            {
+                return null;
+            }
         }
         [System.ComponentModel.DataObjectMethod(System.ComponentModel.DataObjectMethodType.Select, false)]
         public Datos.Automotora.vehiculosDataTable Patente(string patente)
         {
-            return vehiculo.GetDataByPatente(patente);
+            try
+            {
+                return vehiculo.GetDataByPatente(patente);
+            }
+            catch(Exception e)
+            {
+                return null;
+            }
+            
         }
     }
 }

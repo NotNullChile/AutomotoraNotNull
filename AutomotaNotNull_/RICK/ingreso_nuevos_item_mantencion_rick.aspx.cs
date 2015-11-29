@@ -21,5 +21,11 @@ namespace AutomotaNotNull_
             TextBox txtIdMantenciones = (TextBox)DetailsView1.FindControl("txtIdMantenciones");
             txtIdMantenciones.Text = m.countMantenciones();
         }
+
+        protected void TextBox4_Load(object sender, EventArgs e)
+        {
+            TextBox TextBox4 = (TextBox)DetailsView1.FindControl("TextBox4");
+            TextBox4.Text = DropDownList1.Text;
+        }
     }
 }

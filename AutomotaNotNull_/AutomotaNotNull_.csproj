@@ -57,7 +57,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="asignar_vehiculo_cliente_rick.aspx" />
+    <Content Include="RICK\asignar_vehiculo_cliente_rick.aspx" />
     <Content Include="Buscar_Vehiculos.aspx" />
     <Content Include="css\bootstrap.css" />
     <Content Include="css\font-awesome.css" />
@@ -79,17 +79,17 @@
     <Content Include="Ingresar_Repuesto.aspx" />
     <Content Include="Ingresar_Vehiculo_Admin.aspx" />
     <Content Include="Ingresar_Venta_Admin.aspx" />
-    <Content Include="ingreso_nuevos_item_mantencion_rick.aspx" />
+    <Content Include="RICK\ingreso_nuevos_item_mantencion_rick.aspx" />
     <Content Include="Ingreso_Vehiculo_Cliente.aspx" />
     <Content Include="RICK\ingreso_vehiculo_rick.aspx" />
-    <Content Include="insert_compra_rick.aspx" />
+    <Content Include="RICK\insert_compra_rick.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Logout.aspx" />
     <Content Include="Mis_Mantenciones.aspx" />
     <Content Include="Mis_Vehiculos.aspx" />
     <Content Include="Mi_Perfil.aspx" />
     <Content Include="Registro_Cliente.aspx" />
-    <Content Include="registro_cliente_rick.aspx" />
+    <Content Include="RICK\registro_cliente_rick.aspx" />
     <Content Include="RICK\registrar_vehiculo_cliente.aspx" />
     <Content Include="Site1.Master" />
     <Content Include="fonts\fontawesome-webfont.eot" />
@@ -108,7 +108,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Vender_Vehiculo.aspx" />
-    <Content Include="venta_rick.aspx" />
+    <Content Include="RICK\venta_rick.aspx" />
     <Content Include="Ver_Mantenciones_Admin.aspx" />
     <Content Include="Ver_Vehiculo_Cliente_Admin.aspx" />
     <Content Include="Web.config" />
@@ -121,11 +121,11 @@
     <Compile Include="Admin.Master.designer.cs">
       <DependentUpon>Admin.Master</DependentUpon>
     </Compile>
-    <Compile Include="asignar_vehiculo_cliente_rick.aspx.cs">
+    <Compile Include="RICK\asignar_vehiculo_cliente_rick.aspx.cs">
       <DependentUpon>asignar_vehiculo_cliente_rick.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="asignar_vehiculo_cliente_rick.aspx.designer.cs">
+    <Compile Include="RICK\asignar_vehiculo_cliente_rick.aspx.designer.cs">
       <DependentUpon>asignar_vehiculo_cliente_rick.aspx</DependentUpon>
     </Compile>
     <Compile Include="Buscar_Vehiculos.aspx.cs">
@@ -198,11 +198,11 @@
     <Compile Include="Ingresar_Venta_Admin.aspx.designer.cs">
       <DependentUpon>Ingresar_Venta_Admin.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ingreso_nuevos_item_mantencion_rick.aspx.cs">
+    <Compile Include="RICK\ingreso_nuevos_item_mantencion_rick.aspx.cs">
       <DependentUpon>ingreso_nuevos_item_mantencion_rick.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ingreso_nuevos_item_mantencion_rick.aspx.designer.cs">
+    <Compile Include="RICK\ingreso_nuevos_item_mantencion_rick.aspx.designer.cs">
       <DependentUpon>ingreso_nuevos_item_mantencion_rick.aspx</DependentUpon>
     </Compile>
     <Compile Include="Ingreso_Vehiculo_Cliente.aspx.cs">
@@ -219,11 +219,11 @@
     <Compile Include="RICK\ingreso_vehiculo_rick.aspx.designer.cs">
       <DependentUpon>ingreso_vehiculo_rick.aspx</DependentUpon>
     </Compile>
-    <Compile Include="insert_compra_rick.aspx.cs">
+    <Compile Include="RICK\insert_compra_rick.aspx.cs">
       <DependentUpon>insert_compra_rick.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="insert_compra_rick.aspx.designer.cs">
+    <Compile Include="RICK\insert_compra_rick.aspx.designer.cs">
       <DependentUpon>insert_compra_rick.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
@@ -269,11 +269,11 @@
     <Compile Include="Registro_Cliente.aspx.designer.cs">
       <DependentUpon>Registro_Cliente.aspx</DependentUpon>
     </Compile>
-    <Compile Include="registro_cliente_rick.aspx.cs">
+    <Compile Include="RICK\registro_cliente_rick.aspx.cs">
       <DependentUpon>registro_cliente_rick.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="registro_cliente_rick.aspx.designer.cs">
+    <Compile Include="RICK\registro_cliente_rick.aspx.designer.cs">
       <DependentUpon>registro_cliente_rick.aspx</DependentUpon>
     </Compile>
     <Compile Include="RICK\registrar_vehiculo_cliente.aspx.cs">
@@ -304,11 +304,11 @@
     <Compile Include="Vender_Vehiculo.aspx.designer.cs">
       <DependentUpon>Vender_Vehiculo.aspx</DependentUpon>
     </Compile>
-    <Compile Include="venta_rick.aspx.cs">
+    <Compile Include="RICK\venta_rick.aspx.cs">
       <DependentUpon>venta_rick.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="venta_rick.aspx.designer.cs">
+    <Compile Include="RICK\venta_rick.aspx.designer.cs">
       <DependentUpon>venta_rick.aspx</DependentUpon>
     </Compile>
     <Compile Include="Ver_Mantenciones_Admin.aspx.cs">

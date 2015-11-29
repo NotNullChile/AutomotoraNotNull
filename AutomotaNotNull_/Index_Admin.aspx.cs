@@ -11,7 +11,12 @@ namespace AutomotaNotNull_
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["rutAdmin"] == null || Session["rol"] == null)
+            {
+                Response.Redirect("default.aspx");
+            }
+            int rut = int.Parse(Session["rutAdmin"].ToString());
+            //lblSaludo.Text = "Bienvenido <br>" + c.nombreCliente(rut);
         }
     }
 }
