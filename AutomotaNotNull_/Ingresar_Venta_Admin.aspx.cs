@@ -12,6 +12,10 @@ namespace AutomotaNotNull_
         Venta v = new Venta();
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["rutAdmin"] == null || Session["rol"] == null)
+            {
+                Response.Redirect("default.aspx");
+            }
             TextBox txtIdVenta = (TextBox)DetailsView1.FindControl("txtIdVenta");
             txtIdVenta.Text = v.countVenta();
         }
