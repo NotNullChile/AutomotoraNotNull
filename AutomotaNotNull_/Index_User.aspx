@@ -3,7 +3,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server" >
     <form id="form1" runat="server">
-        <asp:Label ID="lblSaludo" runat="server" Text="lblSaludo"></asp:Label>
+        
         <br />
     <div class="alert-info">
     <div class="btn-group btn-group-justified" role="group" aria-label="..." style="padding:80px; padding-bottom:20px">
@@ -22,7 +22,12 @@
             <a href="Ingreso_Vehiculo_Cliente.aspx" class="btn btn-default" style="height:120px"><h4>Registrar Vehículos</h4> <br /><i class="fa fa-registered fa-3x"></i></a>
         </div>
         <div class="btn-group" role="group">
-            <a href="Mi_Perfil.aspx" class="btn btn-default" style="height:120px"><h4>Ver mi Perfil</h4> <br /><i class="fa fa-user fa-3x"></i></a>
+            <a href="Index_User.aspx" class="btn btn-default" style="height:120px">
+                <h4>
+                    <asp:Label ID="lblSaludo" runat="server" Text="lblSaludo"></asp:Label>
+                </h4> 
+                <br />
+                <i class="fa fa-user fa-3x"></i></a>
         </div>
         <div class="btn-group" role="group">
             

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Datos;
+using System.Data;
 namespace Negocio
 {
     [System.ComponentModel.DataObject]
@@ -30,6 +31,12 @@ namespace Negocio
         {
             return mantenciones.countIdMantenciones().ToString();
         }
+        [System.ComponentModel.DataObjectMethod(System.ComponentModel.DataObjectMethodType.Select, false)]
+        public DataTable misMantenciones(int rut)
+        {
+            return mantenciones.GetDataByRut(rut);
+        }
+        
         
     }
 }
