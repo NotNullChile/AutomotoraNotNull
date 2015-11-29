@@ -50,7 +50,7 @@
                 <div class="btn-group" role="group">
                     <a href="Ver_Vehiculo_Cliente_Admin.aspx" class="btn btn-default" style="height:120px"><h4>Ver vehículos por Cliente</h4> <br /><i class="fa fa-user-plus fa-3x"></i></a>
                 </div>
-                <div class="btn-group" role="group">
+                <div class="btn-group" role="group"> 
                     <a href="Ver_Mantenciones_Admin.aspx" class="btn btn-default" style="height:120px"><h4>Ver Mantenciones</h4> <br /><i class="fa fa-wrench fa-3x"></i></a>
                 </div>
                 <div class="btn-group" role="group">
