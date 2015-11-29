@@ -163,6 +163,7 @@
                 <asp:Parameter Name="estado" Type="Boolean" />
                 <asp:Parameter Name="idCompra" Type="Int32" />
                 <asp:Parameter Name="urlFoto" Type="String" />
+                <asp:Parameter Name="idCliente" Type="Int32" />
             </InsertParameters>
         </asp:ObjectDataSource>
     

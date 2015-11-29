@@ -22,9 +22,12 @@ namespace Negocio
         {
             int res = 0;
             res= vehiculo.Insert(patenteVehiculo, numeroMotor, numeroChasis, modelo, tipoVehiculo, color, estado, idCompra, urlFoto);
-            if(res == 1)
+            if (idCliente > 0)
             {
-                vehiculoCliente.Insert(idCliente, patenteVehiculo);
+                if (res == 1)
+                {
+                    vehiculoCliente.Insert(idCliente, patenteVehiculo);
+                }
             }
             return res;
         }

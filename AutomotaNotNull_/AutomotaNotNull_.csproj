@@ -64,6 +64,12 @@
     <Content Include="css\Style.css" />
     <Content Include="Default.aspx" />
     <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="imagesAuto\Audi.jpg" />
+    <Content Include="imagesAuto\Chevrolet.jpg" />
+    <Content Include="imagesAuto\descarga.jpg" />
+    <Content Include="imagesAuto\Ford.jpg" />
+    <Content Include="imagesAuto\Furgon.jpg" />
+    <Content Include="imagesAuto\MCLaren.jpg" />
     <Content Include="images\banner.png" />
     <Content Include="Index_User.aspx" />
     <Content Include="ingreso_nuevos_item_mantencion_rick.aspx" />

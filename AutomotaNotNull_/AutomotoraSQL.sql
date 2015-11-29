@@ -119,7 +119,12 @@ INSERT INTO COMPRA VALUES (1,'Subaru',80000,'2015-01-01');
 
 /** INSERT VEHICULO **/
 
-INSERT INTO vehiculos VALUES ('HZ-GG-20', 123456789, 123456789, 'SBZ', 'Sedan','Rojo',0,1,'foto');
+INSERT INTO vehiculos VALUES ('AZ-BY-1', 123456789, 123456789, 'McLaren', 'Deportivo','Rojo',1,0,'/imagesAuto/MCLaren.jpg');
+INSERT INTO vehiculos VALUES ('AZ-BY-2', 23456789, 23456789, 'Audi', 'Deportivo','Blanco',1,0,'/imagesAuto/Audi.jpg');
+INSERT INTO vehiculos VALUES ('AZ-BY-3', 3456789, 3456789, 'Chevrolet', 'Sedan','Blanco',1,0,'/imagesAuto/Chevrolet.jpg');
+INSERT INTO vehiculos VALUES ('AZ-BY-4', 456789, 456789, 'Ford', 'Todo Terreno','Blanco',1,0,'/imagesAuto/Ford.jpg');
+INSERT INTO vehiculos VALUES ('AZ-BY-5', 56789, 56789, 'Furgon', 'Furgon','Varios',1,0,'/imagesAuto/Furgon.jpg');
+
 
 SELECT * FROM vehiculos;
 SELECT * FROM usuarios;
@@ -145,3 +150,6 @@ SELECT * FROM mantenciones WHERE rutCliente = 19133111;
 /* Nombre Cliente */
 
 SELECT nombreCliente FROM clientes WHERE rutCliente =1;
+
+DELETE FROM vehiculos;
+DELETE FROM vehiculo_cliente;

@@ -6,7 +6,14 @@
         <br />
         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="patenteVehiculo" DataSourceID="DSVehiculo" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
             <Columns>
-                <asp:BoundField DataField="urlFoto" HeaderText="urlFoto" SortExpression="urlFoto" />
+                <asp:TemplateField HeaderText="Fotos" SortExpression="urlFoto">
+                    <EditItemTemplate>
+                        <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("urlFoto") %>'></asp:TextBox>
+                    </EditItemTemplate>
+                    <ItemTemplate>
+                        <asp:Image ID="Image1" runat="server" Height="150px" ImageUrl='<%# Eval("urlFoto") %>' Width="200px" />
+                    </ItemTemplate>
+                </asp:TemplateField>
                 <asp:BoundField DataField="patenteVehiculo" HeaderText="Patente" ReadOnly="True" SortExpression="patenteVehiculo" />
                 <asp:BoundField DataField="modelo" HeaderText="Modelo" SortExpression="modelo" />
                 <asp:BoundField DataField="tipoVehiculo" HeaderText="Tipo" SortExpression="tipoVehiculo" />
