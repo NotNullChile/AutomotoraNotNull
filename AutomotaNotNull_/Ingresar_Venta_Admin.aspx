@@ -45,19 +45,7 @@
                     <InsertItemTemplate>
                         <asp:DropDownList ID="DropDownList2" runat="server" DataSourceID="DSPatente" DataTextField="patenteVehiculo" DataValueField="patenteVehiculo" SelectedValue='<%# Bind("patenteVehiculo") %>'>
                         </asp:DropDownList>
-                        <asp:ObjectDataSource ID="DSPatente" runat="server" InsertMethod="insertVehiculo" OldValuesParameterFormatString="original_{0}" SelectMethod="showAll" TypeName="Negocio.Vehiculo">
-                            <InsertParameters>
-                                <asp:Parameter Name="patenteVehiculo" Type="String" />
-                                <asp:Parameter Name="numeroMotor" Type="Int32" />
-                                <asp:Parameter Name="numeroChasis" Type="Int32" />
-                                <asp:Parameter Name="modelo" Type="String" />
-                                <asp:Parameter Name="tipoVehiculo" Type="String" />
-                                <asp:Parameter Name="color" Type="String" />
-                                <asp:Parameter Name="estado" Type="Boolean" />
-                                <asp:Parameter Name="idCompra" Type="Int32" />
-                                <asp:Parameter Name="urlFoto" Type="String" />
-                            </InsertParameters>
-                        </asp:ObjectDataSource>
+                        <asp:ObjectDataSource ID="DSPatente" runat="server" OldValuesParameterFormatString="original_{0}" SelectMethod="listadoVehiculosParaVenderDDL" TypeName="Negocio.Vehiculo"></asp:ObjectDataSource>
                     </InsertItemTemplate>
                     <ItemTemplate>
                         <asp:Label ID="Label3" runat="server" Text='<%# Bind("patenteVehiculo") %>'></asp:Label>

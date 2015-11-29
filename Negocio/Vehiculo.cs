@@ -75,5 +75,18 @@ namespace Negocio
             }
             
         }
+        [System.ComponentModel.DataObjectMethod(System.ComponentModel.DataObjectMethodType.Select, false)]
+        public Datos.Automotora.vehiculosDataTable listadoVehiculosParaVenderDDL()
+        {
+            try
+            {
+                return vehiculo.GetDataByListaAutoDDLParaVender();
+            }
+            catch (Exception e)
+            {
+                return null;
+            }
+
+        }
     }
 }

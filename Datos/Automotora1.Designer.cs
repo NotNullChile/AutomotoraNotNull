@@ -7188,7 +7188,7 @@ SELECT patenteVehiculo, numeroMotor, numeroChasis, modelo, tipoVehiculo, color, 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[4];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT patenteVehiculo, numeroMotor, numeroChasis, modelo, tipoVehiculo, color, e" +
@@ -7196,13 +7196,17 @@ SELECT patenteVehiculo, numeroMotor, numeroChasis, modelo, tipoVehiculo, color, 
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT * FROM vehiculos WHERE urlFoto IS NOT NULL;";
+            this._commandCollection[1].CommandText = "SELECT * FROM vehiculos WHERE estado = 1;";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "SELECT * FROM vehiculos WHERE patenteVehiculo = @patente;";
+            this._commandCollection[2].CommandText = "SELECT * FROM vehiculos WHERE urlFoto IS NOT NULL;";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@patente", global::System.Data.SqlDbType.VarChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "patenteVehiculo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[3] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[3].Connection = this.Connection;
+            this._commandCollection[3].CommandText = "SELECT * FROM vehiculos WHERE patenteVehiculo = @patente;";
+            this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[3].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@patente", global::System.Data.SqlDbType.VarChar, 10, global::System.Data.ParameterDirection.Input, 0, 0, "patenteVehiculo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7233,7 +7237,7 @@ SELECT patenteVehiculo, numeroMotor, numeroChasis, modelo, tipoVehiculo, color, 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillByListadoVehiculo(Automotora.vehiculosDataTable dataTable) {
+        public virtual int FillByListaAutoDDLParaVender(Automotora.vehiculosDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -7246,7 +7250,7 @@ SELECT patenteVehiculo, numeroMotor, numeroChasis, modelo, tipoVehiculo, color, 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual Automotora.vehiculosDataTable GetDataByListadoVehiculo() {
+        public virtual Automotora.vehiculosDataTable GetDataByListaAutoDDLParaVender() {
             this.Adapter.SelectCommand = this.CommandCollection[1];
             Automotora.vehiculosDataTable dataTable = new Automotora.vehiculosDataTable();
             this.Adapter.Fill(dataTable);
@@ -7257,8 +7261,32 @@ SELECT patenteVehiculo, numeroMotor, numeroChasis, modelo, tipoVehiculo, color, 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillByPatente(Automotora.vehiculosDataTable dataTable, string patente) {
+        public virtual int FillByListadoVehiculo(Automotora.vehiculosDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[2];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual Automotora.vehiculosDataTable GetDataByListadoVehiculo() {
+            this.Adapter.SelectCommand = this.CommandCollection[2];
+            Automotora.vehiculosDataTable dataTable = new Automotora.vehiculosDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByPatente(Automotora.vehiculosDataTable dataTable, string patente) {
+            this.Adapter.SelectCommand = this.CommandCollection[3];
             if ((patente == null)) {
                 throw new global::System.ArgumentNullException("patente");
             }
@@ -7277,7 +7305,7 @@ SELECT patenteVehiculo, numeroMotor, numeroChasis, modelo, tipoVehiculo, color, 
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
         public virtual Automotora.vehiculosDataTable GetDataByPatente(string patente) {
-            this.Adapter.SelectCommand = this.CommandCollection[2];
+            this.Adapter.SelectCommand = this.CommandCollection[3];
             if ((patente == null)) {
                 throw new global::System.ArgumentNullException("patente");
             }
