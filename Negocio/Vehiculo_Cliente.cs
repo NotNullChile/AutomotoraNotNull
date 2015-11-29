@@ -21,9 +21,9 @@ namespace Negocio
             return vehiculoCliente.Insert(idCliente, patenteVehiculo);
         }
         [System.ComponentModel.DataObjectMethod(System.ComponentModel.DataObjectMethodType.Select,true)]
-        public Datos.Automotora.vehiculo_clienteDataTable showAll()
+        public Datos.Automotora.vehiculo_clienteDataTable showAll(int rut)
         {
-            return vehiculoCliente.GetData();
+            return vehiculoCliente.GetData(rut);
         }
         
     }

@@ -6823,8 +6823,8 @@ SELECT rutUsuario, clave, rol FROM usuarios WHERE (rutUsuario = @rutUsuario)";
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[vehiculo_cliente] ([idCliente], [patenteVehiculo]) VALUES (@id" +
-                "Cliente, @patenteVehiculo)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [vehiculo_cliente] ([idCliente], [patenteVehiculo]) VALUES (@idClient" +
+                "e, @patenteVehiculo)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idCliente", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idCliente", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@patenteVehiculo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "patenteVehiculo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -6843,16 +6843,24 @@ SELECT rutUsuario, clave, rol FROM usuarios WHERE (rutUsuario = @rutUsuario)";
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT idCliente, patenteVehiculo FROM dbo.vehiculo_cliente";
+            this._commandCollection[0].CommandText = "SELECT        idCliente, patenteVehiculo\r\nFROM            vehiculo_cliente\r\nWHERE" +
+                "        (idCliente = @idCliente)";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idCliente", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "idCliente", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(Automotora.vehiculo_clienteDataTable dataTable) {
+        public virtual int Fill(Automotora.vehiculo_clienteDataTable dataTable, global::System.Nullable<int> idCliente) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((idCliente.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((int)(idCliente.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -6864,8 +6872,14 @@ SELECT rutUsuario, clave, rol FROM usuarios WHERE (rutUsuario = @rutUsuario)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual Automotora.vehiculo_clienteDataTable GetData() {
+        public virtual Automotora.vehiculo_clienteDataTable GetData(global::System.Nullable<int> idCliente) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((idCliente.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((int)(idCliente.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = global::System.DBNull.Value;
+            }
             Automotora.vehiculo_clienteDataTable dataTable = new Automotora.vehiculo_clienteDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
