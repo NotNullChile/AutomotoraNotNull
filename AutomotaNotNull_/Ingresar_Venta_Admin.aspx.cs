@@ -4,14 +4,21 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-
+using Negocio;
 namespace AutomotaNotNull_
 {
     public partial class Ingresar_Venta_Admin : System.Web.UI.Page
     {
+        Venta v = new Venta();
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            TextBox txtIdVenta = (TextBox)DetailsView1.FindControl("txtIdVenta");
+            txtIdVenta.Text = v.countVenta();
+        }
+        protected void txtIdVenta_Load(object sender, EventArgs e)
+        {
+            TextBox txtIdVenta = (TextBox)DetailsView1.FindControl("txtIdVenta");
+            txtIdVenta.Text = v.countVenta();
         }
     }
 }

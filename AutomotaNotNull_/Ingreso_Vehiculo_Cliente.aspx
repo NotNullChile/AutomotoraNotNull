@@ -27,7 +27,7 @@
                                 <asp:DynamicControl ID="DynamicControl1" runat="server" DataField="" Mode="Edit" />
                             </EditItemTemplate>
                             <InsertItemTemplate>
-                                <asp:TextBox ID="txtRut" runat="server" ReadOnly="True" Text='<%# Bind("idCliente") %>'></asp:TextBox>
+                                <asp:TextBox ID="txtRut" runat="server" ReadOnly="True" Text='<%# Bind("idCliente") %>' OnLoad="txtRut_Load"></asp:TextBox>
                             </InsertItemTemplate>
                             <ItemTemplate>
                                 <asp:TextBox ID="TextBox10" runat="server" ReadOnly="True" Text='<%# Bind("idCliente") %>'></asp:TextBox>
@@ -157,7 +157,7 @@
                     </EditItemTemplate>
                     <InsertItemTemplate>
                         <asp:RadioButtonList ID="RadioButtonList1" runat="server" SelectedValue='<%# Bind("estado") %>'>
-                            <asp:ListItem Value="true" Selected="True">Disponible</asp:ListItem>
+                            <asp:ListItem Value="false" Selected="True">No disponible para venta</asp:ListItem>
                         </asp:RadioButtonList>
                     </InsertItemTemplate>
                     <ItemTemplate>

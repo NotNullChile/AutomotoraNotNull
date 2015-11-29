@@ -136,12 +136,14 @@ SELECT * FROM usuarios WHERE rutUsuario = '19133111' AND clave = 'rick' AND rol 
 
 /** Ver Mis Vehiculos **/
 
+
 SELECT patenteVehiculo FROM vehiculo_cliente WHERE idCliente = 19133111;
 SELECT * FROM vehiculos WHERE patenteVehiculo = 'gsg';
 
 /** Listado Vehiculo **/
-
+UPDATE vehiculos SET estado = 0 WHERE patenteVehiculo = 'HB-HZ-30';
 SELECT * FROM vehiculos WHERE urlFoto IS NOT NULL;
+SELECT * FROM vehiculos WHERE estado = 1;
 
 /** Mis Mantenciones **/ 
 
@@ -151,5 +153,6 @@ SELECT * FROM mantenciones WHERE rutCliente = 19133111;
 
 SELECT nombreCliente FROM clientes WHERE rutCliente =1;
 
-DELETE FROM vehiculos;
+SELECT * FROM vehiculos;
+DELETE FROM vehiculos WHERE patenteVehiculo = 'aa';
 DELETE FROM vehiculo_cliente;

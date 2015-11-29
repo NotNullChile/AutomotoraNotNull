@@ -11,6 +11,20 @@
     <form id="form1" runat="server">
     <div>
     
+        Eliga Cliente
+        <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="DSCliente" DataTextField="nombreCliente" DataValueField="rutCliente" SelectedValue='<%# Bind("rutCliente") %>' AutoPostBack="True" Width="82px">
+        </asp:DropDownList>
+        <asp:ObjectDataSource ID="DSCliente" runat="server" OldValuesParameterFormatString="original_{0}" SelectMethod="showAll" TypeName="Negocio.Cliente" InsertMethod="insertCliente">
+            <InsertParameters>
+                <asp:Parameter Name="rutCliente" Type="Int32" />
+                <asp:Parameter Name="nombreCliente" Type="String" />
+                <asp:Parameter Name="fechaNacimiento" Type="DateTime" />
+                <asp:Parameter Name="direccion" Type="String" />
+                <asp:Parameter Name="clave" Type="String" />
+            </InsertParameters>
+        </asp:ObjectDataSource>
+        <br />
+    
         <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" DataKeyNames="idMantenciones" DataSourceID="DSMantencion" DefaultMode="Insert" Height="50px" style="margin-right: 1px" Width="383px">
             <Fields>
                 <asp:TemplateField HeaderText="ID Mantención" SortExpression="idMantenciones">
@@ -53,17 +67,20 @@
                         <asp:DynamicControl ID="DynamicControl1" runat="server" DataField="rutCliente" Mode="Edit" />
                     </EditItemTemplate>
                     <InsertItemTemplate>
-                        <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="DSCliente" DataTextField="nombreCliente" DataValueField="rutCliente" SelectedValue='<%# Bind("rutCliente") %>'>
+                        <asp:DropDownList ID="DropDownList3" runat="server" DataSourceID="DSPAtente1" DataTextField="patenteVehiculo" DataValueField="patenteVehiculo" SelectedValue='<%# Bind("patenteVehiculo") %>'>
                         </asp:DropDownList>
-                        <asp:ObjectDataSource ID="DSCliente" runat="server" InsertMethod="insertCliente" OldValuesParameterFormatString="original_{0}" SelectMethod="showAll" TypeName="Negocio.Cliente">
+                        <asp:ObjectDataSource ID="DSPAtente1" runat="server" InsertMethod="insertMantenciones" OldValuesParameterFormatString="original_{0}" SelectMethod="showAll" TypeName="Negocio.Vehiculo_Cliente">
                             <InsertParameters>
                                 <asp:Parameter Name="rutCliente" Type="Int32" />
-                                <asp:Parameter Name="nombreCliente" Type="String" />
-                                <asp:Parameter Name="fechaNacimiento" Type="DateTime" />
-                                <asp:Parameter Name="direccion" Type="String" />
-                                <asp:Parameter Name="clave" Type="String" />
+                                <asp:Parameter Name="patenteVehiculo" Type="String" />
+                                <asp:Parameter Name="idCliente" Type="Int32" />
                             </InsertParameters>
+                            <SelectParameters>
+                                <asp:ControlParameter ControlID="DropDownList1" Name="rut" PropertyName="SelectedValue" Type="Int32" />
+                            </SelectParameters>
                         </asp:ObjectDataSource>
+                        <asp:TextBox ID="TextBox4" runat="server" OnLoad="TextBox4_Load" Text='<%# Bind("rutCliente") %>'></asp:TextBox>
+                        <br />
                     </InsertItemTemplate>
                     <ItemTemplate>
                         <asp:DynamicControl ID="DynamicControl1" runat="server" DataField="rutCliente" Mode="ReadOnly" />
@@ -76,18 +93,10 @@
                     <InsertItemTemplate>
                         <asp:DropDownList ID="DropDownList2" runat="server" DataSourceID="DSPatente" DataTextField="patenteVehiculo" DataValueField="patenteVehiculo" SelectedValue='<%# Bind("patenteVehiculo") %>'>
                         </asp:DropDownList>
-                        <asp:ObjectDataSource ID="DSPatente" runat="server" InsertMethod="insertVehiculo" OldValuesParameterFormatString="original_{0}" SelectMethod="showAll" TypeName="Negocio.Vehiculo">
-                            <InsertParameters>
-                                <asp:Parameter Name="patenteVehiculo" Type="String" />
-                                <asp:Parameter Name="numeroMotor" Type="Int32" />
-                                <asp:Parameter Name="numeroChasis" Type="Int32" />
-                                <asp:Parameter Name="modelo" Type="String" />
-                                <asp:Parameter Name="tipoVehiculo" Type="String" />
-                                <asp:Parameter Name="color" Type="String" />
-                                <asp:Parameter Name="estado" Type="Boolean" />
-                                <asp:Parameter Name="idCompra" Type="Int32" />
-                                <asp:Parameter Name="urlFoto" Type="String" />
-                            </InsertParameters>
+                        <asp:ObjectDataSource ID="DSPatente" runat="server" OldValuesParameterFormatString="original_{0}" SelectMethod="showAll" TypeName="Negocio.Vehiculo_Cliente">
+                            <SelectParameters>
+                                <asp:ControlParameter ControlID="DetailsView1" Name="rut" PropertyName="SelectedValue" Type="Int32" />
+                            </SelectParameters>
                         </asp:ObjectDataSource>
                     </InsertItemTemplate>
                     <ItemTemplate>

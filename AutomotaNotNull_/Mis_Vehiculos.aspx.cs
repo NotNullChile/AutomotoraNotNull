@@ -17,5 +17,10 @@ namespace AutomotaNotNull_
             }
             lblRut.Text = Session["rutCliente"].ToString();
         }
+
+        protected void lblRut_Load(object sender, EventArgs e)
+        {
+            lblRut.Text = Session["rutCliente"].ToString();
+        }
     }
 }

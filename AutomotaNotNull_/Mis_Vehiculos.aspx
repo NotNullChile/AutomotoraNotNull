@@ -37,7 +37,7 @@
             </tr>
             <tr>
                 <td class="auto-style1">
-                    <asp:Label ID="lblRut" runat="server" Enabled="False" Visible="False"></asp:Label>
+                    <asp:Label ID="lblRut" runat="server" Enabled="False" Visible="False" OnLoad="lblRut_Load"></asp:Label>
                     <br />
                 </td>
             </tr>
