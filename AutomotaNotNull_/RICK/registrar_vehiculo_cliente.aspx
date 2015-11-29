@@ -1,22 +1,18 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="Ingreso_Vehiculo.aspx.cs" Inherits="AutomotaNotNull_.Ingreso_Vehiculo" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <link href="css/Style.css" rel="stylesheet" />
-    <link href="css/bootstrap.css" rel="stylesheet" />
-    <link href="css/font-awesome.css" rel="stylesheet" />
-</asp:Content>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="registrar_vehiculo_cliente.aspx.cs" Inherits="AutomotaNotNull_.RICK.registrar_vehiculo_cliente" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
 
 
-<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+</head>
+<body>
     <form id="form1" runat="server">
-        <br />
-        <div class="row">
-            <div class="col-lg-1 col-md-1 col-sm-1"></div>
-            <div class="col-lg-10 col-md-10 col-sm-10 panel panel-primary" style="padding:30px">
-                <h2 class="panel-heading panel-primary">REGISTRO VEHICULO <i class="fa fa-car"></i></h2>
-                <br />
-                <h4 class="panel panel-body">
-            
-                <%--DetailsView--%>
+    <div>
+    
                 <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" 
                     DataKeyNames="patenteVehiculo" DataSourceID="DSVehiculo" DefaultMode="Insert" 
                     Height="50px" Width="100%" CssClass="table">
@@ -37,7 +33,7 @@
                         </asp:RequiredFieldValidator>
                     </InsertItemTemplate>
                     <ItemTemplate>
-                        <asp:Label ID="Label1" runat="server" Text='<%# Bind("patenteVehiculo") %>'>
+                        <asp:Label ID="Label9" runat="server" Text='<%# Bind("patenteVehiculo") %>'>
                         </asp:Label>
                     </ItemTemplate>
                 </asp:TemplateField>
@@ -146,12 +142,11 @@
                     </EditItemTemplate>
                     <InsertItemTemplate>
                         <asp:RadioButtonList ID="RadioButtonList1" runat="server" SelectedValue='<%# Bind("estado") %>'>
-                            <asp:ListItem Value="true">Disponible</asp:ListItem>
-                            <asp:ListItem Value="false">Ocupado</asp:ListItem>
+                            <asp:ListItem Value="true" Selected="True">Disponible</asp:ListItem>
                         </asp:RadioButtonList>
                     </InsertItemTemplate>
                     <ItemTemplate>
-                        <asp:CheckBox ID="CheckBox1" runat="server" Checked='<%# Bind("estado") %>' Enabled="false" />
+                        <asp:CheckBox ID="CheckBox2" runat="server" Checked='<%# Bind("estado") %>' Enabled="false" />
                     </ItemTemplate>
                 </asp:TemplateField>
                 <%--Factura--%>
@@ -160,23 +155,14 @@
                         <asp:TextBox ID="TextBox6" runat="server" Text='<%# Bind("idCompra") %>'></asp:TextBox>
                     </EditItemTemplate>
                     <InsertItemTemplate>
-                        <asp:DropDownList ID="DropDownList3" runat="server" DataSourceID="DSFactura" DataTextField="idCompra" DataValueField="idCompra" SelectedValue='<%# Bind("idCompra") %>'>
-                        </asp:DropDownList>
-                        <asp:ObjectDataSource ID="DSFactura" runat="server" InsertMethod="insertCompra" OldValuesParameterFormatString="original_{0}" SelectMethod="showAll" TypeName="Negocio.Compra">
-                            <InsertParameters>
-                                <asp:Parameter Name="idCompra" Type="Int32" />
-                                <asp:Parameter Name="proveedor" Type="String" />
-                                <asp:Parameter Name="valorVehiculo" Type="String" />
-                                <asp:Parameter Name="fechaCompra" Type="String" />
-                            </InsertParameters>
-                        </asp:ObjectDataSource>
+                        <asp:TextBox ID="TextBox9" runat="server" ReadOnly="True" TextMode="Number">0</asp:TextBox>
                     </InsertItemTemplate>
                     <ItemTemplate>
                         <asp:Label ID="Label7" runat="server" Text='<%# Bind("idCompra") %>'></asp:Label>
                     </ItemTemplate>
                 </asp:TemplateField>    
                 <%--Foto--%>
-                <asp:TemplateField HeaderText="Foto" SortExpression="urlFoto">
+                <asp:TemplateField HeaderText="Foto" SortExpression="urlFoto" Visible="False">
                     <EditItemTemplate>
                         <asp:TextBox ID="TextBox7" runat="server" Text='<%# Bind("urlFoto") %>'></asp:TextBox>
                     </EditItemTemplate>
@@ -190,7 +176,6 @@
                 <asp:CommandField ShowInsertButton="True" />
             </Fields>
                 </asp:DetailsView>
-                <%--DataSource--%>>
                 <asp:ObjectDataSource ID="DSVehiculo" runat="server" InsertMethod="insertVehiculo" OldValuesParameterFormatString="original_{0}" SelectMethod="showAll" TypeName="Negocio.Vehiculo">
                     <InsertParameters>
                 <asp:Parameter Name="patenteVehiculo" Type="String" />
@@ -206,9 +191,7 @@
                 </asp:ObjectDataSource>
     
    
-                </h4>
-            </div>    
-            <div class="col-lg-1 col-md-1 col-sm-1"></div>
-        </div>
+    </div>
     </form>
-</asp:Content>
+</body>
+</html>

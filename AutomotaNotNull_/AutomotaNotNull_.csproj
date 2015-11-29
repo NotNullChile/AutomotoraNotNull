@@ -70,6 +70,8 @@
     <Content Include="insert_compra_rick.aspx" />
     <Content Include="Registro_Cliente.aspx" />
     <Content Include="registro_cliente_rick.aspx" />
+    <Content Include="RICK\registrar_vehiculo_cliente.aspx" />
+    <Content Include="RICK\ver_mis_vehiculos.aspx" />
     <Content Include="Site1.Master" />
     <Content Include="fonts\fontawesome-webfont.eot" />
     <Content Include="fonts\fontawesome-webfont.ttf" />
@@ -144,6 +146,20 @@
     </Compile>
     <Compile Include="registro_cliente_rick.aspx.designer.cs">
       <DependentUpon>registro_cliente_rick.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RICK\registrar_vehiculo_cliente.aspx.cs">
+      <DependentUpon>registrar_vehiculo_cliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RICK\registrar_vehiculo_cliente.aspx.designer.cs">
+      <DependentUpon>registrar_vehiculo_cliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RICK\ver_mis_vehiculos.aspx.cs">
+      <DependentUpon>ver_mis_vehiculos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RICK\ver_mis_vehiculos.aspx.designer.cs">
+      <DependentUpon>ver_mis_vehiculos.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site1.Master.cs">
       <DependentUpon>Site1.Master</DependentUpon>

@@ -128,3 +128,8 @@ SELECT * FROM vehiculo_cliente;
 
 /** lOGIN **/
 SELECT * FROM usuarios WHERE rutUsuario = '19133111' AND clave = 'rick' AND rol = 0;
+
+/** Ver Mis Vehiculos **/
+
+SELECT * FROM vehiculo_cliente WHERE idCliente = 19133111;
+SELECT * FROM vehiculos WHERE patenteVehiculo = 'gsg';

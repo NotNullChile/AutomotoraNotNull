@@ -7,10 +7,10 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace AutomotaNotNull_ {
+namespace AutomotaNotNull_.RICK {
     
     
-    public partial class Ingreso_Vehiculo {
+    public partial class registrar_vehiculo_cliente {
         
         /// <summary>
         /// Control form1.
