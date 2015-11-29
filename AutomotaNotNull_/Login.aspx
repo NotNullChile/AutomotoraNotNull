@@ -26,7 +26,7 @@
                             <asp:label text="Contraseña" runat="server" />
                         </asp:TableCell>
                         <asp:TableCell>
-                            <asp:textbox runat="server" ID="txt_password_sesion" Width="80%"></asp:textbox>  
+                            <asp:textbox runat="server" TextMode="Password" ID="txt_password_sesion" Width="80%"></asp:textbox>  
                         </asp:TableCell>
                     </asp:TableRow>
                     <asp:TableRow>
