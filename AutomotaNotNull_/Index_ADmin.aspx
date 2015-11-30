@@ -42,9 +42,6 @@
                     <a href="Ingresar_Repuesto.aspx" class="btn btn-default" style="height:120px"><h4>Ingresar Repuesto</h4> <br /><i class="fa fa-cog fa-3x"></i></a>
                 </div>
                 <div class="btn-group" role="group">
-                    <a href="Vender_Vehiculo.aspx" class="btn btn-default" style="height:120px"><h4>Vender Vehículo</h4> <br /><i class="fa fa-car fa-3x"></i></a>
-                </div>
-                <div class="btn-group" role="group">
                     <a href="Eiminar_Cliente.aspx" class="btn btn-default" style="height:120px"><h4>Eliminar Cliente</h4> <br /><i class="fa fa-user-times fa-3x"></i></a>
                 </div>
                 <div class="btn-group" role="group">

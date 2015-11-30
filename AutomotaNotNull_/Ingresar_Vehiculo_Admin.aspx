@@ -1,14 +1,37 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin.Master" AutoEventWireup="true" CodeBehind="Ingresar_Vehiculo_Admin.aspx.cs" Inherits="AutomotaNotNull_.Ingresar_Vehiculo_Admin" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+<asp:Content ID="Content1" 
+    ContentPlaceHolderID="head" 
+    runat="server">
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<asp:Content ID="Content2" 
+    ContentPlaceHolderID="ContentPlaceHolder1" 
+    runat="server">
     <form id="form1" runat="server">
+        <br />
         <div class="row panel-info">
-            <div class="col-lg-1 col-md-1 col-sm-1"></div>
-            <div class="col-lg-10 col-md-10 col-sm-10 alert-info" style="padding:30px">
-                <h2 class="panel panel-heading panel-primary">Ingresar Vehículo por Compra <i class="fa fa-car"></i></h2>
-                <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" 
-                    DataKeyNames="patenteVehiculo" DataSourceID="DSVehiculo" DefaultMode="Insert" Height="50px" Width="249px">
+            <div class="col-lg-1 col-md-1 col-sm-1">
+            </div>
+            <div class="col-lg-10 col-md-10 col-sm-10 
+                alert-info" style="padding:30px">
+                <table style="width:100%" class="panel">
+                    <tr class="panel-heading panel-primary">
+                        <td class="panel-heading panel-primary 
+                            col-lg-3 col-md-3 col-sm-3">
+                            <h4>
+                                Registrar Vehículo:
+                            </h4>
+                        </td>
+                    </tr>
+                </table>
+                <asp:DetailsView ID="DetailsView1" 
+                    runat="server" AutoGenerateRows="False" 
+                    DataKeyNames="patenteVehiculo" 
+                    DataSourceID="DSVehiculo" 
+                    DefaultMode="Insert" 
+                    Height="50px" 
+                    Width="100%" 
+                    CssClass="table panel-body" 
+                    BackColor="White">
                     <Fields>
                         <asp:TemplateField HeaderText="Patente" SortExpression="patenteVehiculo">
                             <EditItemTemplate>
@@ -63,7 +86,7 @@
                                 <asp:TextBox ID="TextBox4" runat="server" Text='<%# Bind("tipoVehiculo") %>'></asp:TextBox>
                             </EditItemTemplate>
                             <InsertItemTemplate>
-                                <asp:DropDownList ID="DropDownList1" runat="server" Height="16px" SelectedValue='<%# Bind("tipoVehiculo") %>' Width="126px">
+                                <asp:DropDownList ID="DropDownList1" runat="server" SelectedValue='<%# Bind("tipoVehiculo") %>' Width="126px">
                                     <asp:ListItem>Turismo</asp:ListItem>
                                     <asp:ListItem>Deportivo</asp:ListItem>
                                     <asp:ListItem>Todoterreno</asp:ListItem>
@@ -165,7 +188,8 @@
                     </InsertParameters>
                 </asp:ObjectDataSource>
             </div>
-            <div class="col-lg-1 col-md-1 col-sm-1"></div>
+            <div class="col-lg-1 col-md-1 col-sm-1">
+            </div>
         </div>
     </form>
 </asp:Content>
