@@ -175,3 +175,9 @@ DELETE FROM venta WHERE idCliente = 19133111;
 DELETE FROM vehiculo_cliente WHERE idCliente = 19133111;
 DELETE FROM mantenciones WHERE rutCliente = 19133111;
 DELETE FROM clientes WHERE rutCliente = 19133111;
+
+SELECT * FROM repuestos;
+
+/** REPUESTO **/
+SELECT stockRepuesto FROM repuestos WHERE idRepuesto= 1;
+UPDATE repuestos SET stockRepuesto = (SELECT stockRepuesto FROM repuestos WHERE idRepuesto=1) - 1 WHERE idRepuesto = 1;

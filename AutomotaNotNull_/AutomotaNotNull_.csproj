@@ -58,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="asignar_vehiculo_cliente_rick.aspx" />
+    <Content Include="Asociar_Repuestos_Mantencion.aspx" />
     <Content Include="Buscar_Vehiculos.aspx" />
     <Content Include="Buscar_Vehiculo_Admin.aspx" />
     <Content Include="Buscar_Vehiculo_Cliente.aspx" />
@@ -125,6 +126,13 @@
     <Compile Include="Admin.Master.designer.cs">
       <DependentUpon>Admin.Master</DependentUpon>
     </Compile>
+    <Compile Include="Asociar_Repuestos_Mantencion.aspx.cs">
+      <DependentUpon>Asociar_Repuestos_Mantencion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Asociar_Repuestos_Mantencion.aspx.designer.cs">
+      <DependentUpon>Asociar_Repuestos_Mantencion.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Buscar_Vehiculo_Admin.aspx.cs">
       <DependentUpon>Buscar_Vehiculo_Admin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -145,13 +153,6 @@
     </Compile>
     <Compile Include="RICK\asignar_vehiculo_cliente_rick.aspx.designer.cs">
       <DependentUpon>asignar_vehiculo_cliente_rick.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Asociar_Repuestos_Mantencion.aspx.cs">
-      <DependentUpon>Asociar_Repuestos_Mantencion.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Asociar_Repuestos_Mantencion.aspx.designer.cs">
-      <DependentUpon>Asociar_Repuestos_Mantencion.aspx</DependentUpon>
     </Compile>
     <Compile Include="Buscar_Vehiculos.aspx.cs">
       <DependentUpon>Buscar_Vehiculos.aspx</DependentUpon>

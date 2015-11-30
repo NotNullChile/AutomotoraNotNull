@@ -39,6 +39,13 @@ namespace Negocio
         public int updateStock(int stock, int idRepuesto, int stockRepuesto, int original_idRepuesto)
         {
             return respuesto.UpdateStockRepuesto(stockRepuesto, original_idRepuesto);
+           
+        }
+        [System.ComponentModel.DataObjectMethod(System.ComponentModel.DataObjectMethodType.Update, true)]
+        public int UpdateStockEnMantencionRepuesto(int cantidad, int idRepuesto, int original_idRepuesto)
+        {
+            return respuesto.UpdateStockEnMantencionRepuesto(cantidad, idRepuesto);
+            
         }
     }
 }
