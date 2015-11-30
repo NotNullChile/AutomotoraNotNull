@@ -16,7 +16,7 @@
                 <asp:DetailsView ID="DetailsView1" runat="server" AutoGenerateRows="False" 
                     DataKeyNames="rutCliente" DataSourceID="DSCliente" DefaultMode="Insert" 
                     Height="50px" Width="100%" OnPageIndexChanging="DetailsView1_PageIndexChanging"
-                    CssClass="table">
+                    CssClass="table" OnItemInserted="DetailsView1_ItemInserted">
                     <Fields>
                     <%--RUT--%>
                     <asp:TemplateField HeaderText="RUT" SortExpression="rutCliente">
@@ -43,7 +43,7 @@
                             <asp:DynamicControl ID="DynamicControl1" runat="server" DataField="clave" Mode="Edit" />
                         </EditItemTemplate>
                         <InsertItemTemplate>
-                            <asp:TextBox ID="txt_registro_clave" runat="server" Width="80%" Text='<%# Bind("clave") %>'></asp:TextBox>
+                            <asp:TextBox ID="txt_registro_clave" runat="server" Width="80%" Text='<%# Bind("clave") %>' TextMode="Password"></asp:TextBox>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator_clave" runat="server" ControlToValidate="txt_registro_clave" ErrorMessage="Ingrese Clave" ForeColor="Red"></asp:RequiredFieldValidator>
                         </InsertItemTemplate>
                         <ItemTemplate>

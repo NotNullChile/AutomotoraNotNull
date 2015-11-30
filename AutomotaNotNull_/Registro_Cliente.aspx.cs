@@ -17,5 +17,10 @@ namespace AutomotaNotNull_
         {
 
         }
+
+        protected void DetailsView1_ItemInserted(object sender, DetailsViewInsertedEventArgs e)
+        {
+            Response.Redirect("Login.aspx");
+        }
     }
 }

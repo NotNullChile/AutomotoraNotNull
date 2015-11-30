@@ -8,8 +8,8 @@
          <div class="alert-info">
             <div class="btn-group btn-group-justified" role="group" aria-label="..." style="padding:80px; padding-bottom:20px">
                 <div class="btn-group" role="group">
-                    <a href="Index_User.aspx" class="btn btn-success" style="height:120px">
-                        <h4><asp:Label ID="lblSaludo" runat="server" Text="lblSaludo"></asp:Label></h4>
+                    <a href="Index_Admin.aspx" class="btn btn-success" style="height:120px">
+                        <h4><asp:Label ID="lblSaludo" runat="server" Text="Bienvenido Administrador"></asp:Label></h4>
                         <br /><i class="fa fa-user fa-2x"></i>
                     </a>
                 </div>
