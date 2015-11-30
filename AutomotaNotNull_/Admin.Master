@@ -26,7 +26,6 @@
                         <li class="navbar-text"><a href="Compra_Auto_Cliente_Admin.aspx">Ingresar Compra<br />Cliente <i class="fa fa-shopping-bag"></i></a></li>
                         <li class="navbar-text"><a href="Compra_Auto_Proveedor_Admin.aspx">Ingresar Compra<br />Proveedor <i class="fa fa-shopping-ship"></i></a></li> 
                         <li class="navbar-text"><a href="Ingresar_Repuesto.aspx">Ingresar <br />Repuesto <i class="fa fa-cogs"></i></a></li>
-                        <li class="navbar-text"><a href="Vender_Vehiculo.aspx">Vender <br />Vehículo <i class="fa fa-car"></i></a></li>
                         <li class="navbar-text"><a href="Eiminar_Cliente.aspx">Eliminar <br />Cliente <i class="fa fa-user-times"></i></a></li>
                         <li class="navbar-text"><a href="Ver_Vehiculo_Cliente_Admin.aspx">Ver Vehículo <br />Cliente <i class="fa fa-user-plus"></i></a></li>
                         <li class="navbar-text"><a href="Ver_Mantenciones_Admin.aspx">Ver <br />Mantenciones <i class="fa fa-wrench"></i></a></li>
