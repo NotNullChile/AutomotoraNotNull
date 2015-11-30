@@ -103,19 +103,10 @@ ALTER TABLE vehiculos ADD urlFoto VARCHAR(50);
 /** INSERT USUARIOS **/
 
 INSERT INTO usuarios VALUES ('191331117','rick',1);
-INSERT INTO usuarios VALUES ('19133111','rick',0);
-
-/** INSERT REPUESTO **/
-
-INSERT INTO repuestos VALUES (1,'Bujias',50,2500);
-
-/** INSERT MANTENCIONES **/
-
-INSERT INTO mantenciones VALUES (1,'Arreglo Motor',60000);
 
 /** INSERT COMPRA **/
 
-INSERT INTO COMPRA VALUES (1,'Subaru',80000,'2015-01-01');
+INSERT INTO COMPRA VALUES (0,'N.M',0,'1900-01-01');
 
 /** INSERT VEHICULO **/
 
@@ -124,6 +115,14 @@ INSERT INTO vehiculos VALUES ('AZ-BY-2', 23456789, 23456789, 'Audi', 'Deportivo'
 INSERT INTO vehiculos VALUES ('AZ-BY-3', 3456789, 3456789, 'Chevrolet', 'Sedan','Blanco',1,0,'/imagesAuto/Chevrolet.jpg');
 INSERT INTO vehiculos VALUES ('AZ-BY-4', 456789, 456789, 'Ford', 'Todo Terreno','Blanco',1,0,'/imagesAuto/Ford.jpg');
 INSERT INTO vehiculos VALUES ('AZ-BY-5', 56789, 56789, 'Furgon', 'Furgon','Varios',1,0,'/imagesAuto/Furgon.jpg');
+
+
+
+
+
+
+
+
 
 SELECT m.idMantenciones AS 'ID Mantención', m.tipoMantencion AS 'Descripción', m.valor AS 'Valor', c.nombreCliente AS 'Cliente', m.patenteVehiculo AS 'Patente'
 FROM mantenciones m
@@ -161,6 +160,9 @@ SELECT * FROM mantenciones WHERE rutCliente = 19133111;
 
 SELECT nombreCliente FROM clientes WHERE rutCliente =1;
 
+
+
+/** Consultas Varias **/ 
 SELECT * FROM usuarios;
 SELECT * FROM clientes;
 DELETE FROM vehiculos WHERE patenteVehiculo = 'aa';
